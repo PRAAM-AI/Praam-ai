@@ -1,4 +1,8 @@
-praamai.com, www.praamai.com {
+www.praamai.com {
+  redir https://praamai.com{uri} permanent
+}
+
+praamai.com {
   encode gzip zstd
   reverse_proxy web:80
 }

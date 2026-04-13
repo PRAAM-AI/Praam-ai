@@ -41,6 +41,7 @@ Then verify:
 ```sh
 docker compose -f docker-compose.prod.yml ps
 curl -I https://praamai.com
+curl -I https://www.praamai.com
 ```
 
 ## Updates
@@ -53,5 +54,6 @@ docker compose -f docker-compose.prod.yml up --build -d
 
 ## Notes
 
+- `praamai.com` is the primary URL. `www.praamai.com` redirects to `https://praamai.com`.
 - TLS certificates are handled automatically by Caddy after DNS is pointed correctly.
 - The current contact form is front-end only. It does not send submissions anywhere yet.
