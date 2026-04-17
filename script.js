@@ -51,7 +51,7 @@ window.addEventListener("scroll", updateChromeState, { passive: true });
 window.addEventListener("load", updateChromeState);
 window.addEventListener("resize", updateChromeState);
 
-document.querySelector(".contact-form")?.addEventListener("submit", (event) => {
+document.querySelector("#contact-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const button = event.currentTarget.querySelector("button");
   const originalText = button.textContent;
