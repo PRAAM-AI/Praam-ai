@@ -491,8 +491,7 @@ textarea:focus-visible {
   padding: var(--section-space) 0;
 }
 
-#deployment,
-#source {
+#deployment {
   scroll-margin-top: 6.5rem;
 }
 
@@ -1193,97 +1192,6 @@ textarea:focus-visible {
   shape-rendering: geometricPrecision;
 }
 
-.section-band-stories-pad {
-  padding-top: 0;
-}
-
-.stories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.35rem;
-}
-
-.story-card {
-  border-radius: 1.25rem;
-  overflow: hidden;
-  background: linear-gradient(165deg, rgba(28, 28, 28, 0.98), rgba(12, 12, 12, 0.99));
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-soft);
-}
-
-.story-card-head {
-  margin: 0;
-  padding: 0.85rem 1rem;
-  text-align: center;
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  background: #2a2a2a;
-  color: #fff;
-}
-
-.story-card-body {
-  padding: 1.25rem 1.35rem 1.5rem;
-}
-
-.story-metric {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  padding: 0.65rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.story-metric:last-of-type {
-  border-bottom: 0;
-  margin-bottom: 0.75rem;
-}
-
-.story-metric-value {
-  font-size: 1.65rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: var(--accent);
-  min-width: 4rem;
-}
-
-.story-metric-label {
-  font-size: 0.82rem;
-  color: var(--muted);
-  line-height: 1.35;
-}
-
-.story-desc {
-  margin: 0 0 1.25rem;
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: var(--muted);
-}
-
-.story-read {
-  width: 100%;
-}
-
-.story-metric-value--hash {
-  font-size: 1.12rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  font-variant-numeric: tabular-nums;
-  min-width: 5.25rem;
-}
-
-.story-inline-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.86em;
-  font-weight: 600;
-  color: rgba(245, 245, 245, 0.88);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.35rem;
-  padding: 0.08rem 0.35rem;
-}
-
 .cta-bar-band {
   padding: clamp(1.75rem, 4vw, 2.5rem) 0;
   background:
@@ -1467,10 +1375,6 @@ textarea:focus-visible {
 
   .sector-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .stories-grid {
-    grid-template-columns: 1fr;
   }
 
   .mission-grid {
