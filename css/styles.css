@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+/* Temporary shim: keep working while repo is reorganized.
+   Source of truth remains `../styles.css`. */
+@import url("../styles.css");
+
