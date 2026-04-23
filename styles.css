@@ -629,10 +629,22 @@ svg {
 }
 
 #about .about-subhead {
-  margin: 0 0 1rem;
+  margin: 0 0 0.55rem;
   font-size: clamp(1.45rem, 2.85vw, 2.05rem);
   font-weight: 800;
   letter-spacing: -0.04em;
+}
+
+#about .about-partner-lead {
+  margin: 0 0 1rem;
+  max-width: 42rem;
+  font-size: clamp(0.95rem, 1.65vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+#about .about-partner-panel .why-grid {
+  margin-top: 0.95rem;
 }
 
 /* Thin tech stack band (reference: kicker + one logo row, minimal vertical space). */
