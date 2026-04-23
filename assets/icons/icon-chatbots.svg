@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="icon" viewBox="0 0 32 32" fill="none" focusable="false">
+  <rect x="6.25" y="17.85" width="8.1" height="7.15" rx="1.35" stroke="#041127" stroke-width="1.05" />
+  <rect x="7.55" y="19.15" width="5.5" height="3.85" rx="0.45" stroke="#041127" stroke-width="0.95" />
+  <path d="M6.6 17.9L5.35 15.35" stroke="#041127" stroke-width="1" stroke-linecap="round" />
+  <circle cx="5.2" cy="14.95" r="0.75" stroke="#041127" stroke-width="0.95" />
+  <rect x="4.55" y="19.55" width="1.25" height="2.75" rx="0.25" stroke="#041127" stroke-width="0.9" />
+  <rect x="14.2" y="19.55" width="1.25" height="2.75" rx="0.25" stroke="#041127" stroke-width="0.9" />
+  <rect x="7.65" y="25" width="5.3" height="3.35" rx="0.65" stroke="#041127" stroke-width="1.05" />
+  <circle cx="8.85" cy="29.35" r="0.75" stroke="#041127" stroke-width="0.95" />
+  <circle cx="11.75" cy="29.35" r="0.75" stroke="#041127" stroke-width="0.95" />
+  <rect x="4.85" y="7.85" width="11.3" height="6.35" rx="1.35" stroke="#041127" stroke-width="1.05" />
+  <path d="M10.5 14.2L8.05 17.55L12.95 17.55Z" stroke="#041127" stroke-width="1" stroke-linejoin="round" />
+  <rect x="18.15" y="20.35" width="6.55" height="5.85" rx="1.05" stroke="#041127" stroke-width="1" />
+  <rect x="19.15" y="21.45" width="4.55" height="2.85" rx="0.4" stroke="#041127" stroke-width="0.9" />
+  <path d="M18.25 20.4L17.15 18.15" stroke="#041127" stroke-width="0.95" stroke-linecap="round" />
+  <circle cx="16.95" cy="17.85" r="0.65" stroke="#041127" stroke-width="0.9" />
+  <rect x="16.45" y="21.85" width="1.05" height="2.35" rx="0.2" stroke="#041127" stroke-width="0.85" />
+  <rect x="23.35" y="21.85" width="1.05" height="2.35" rx="0.2" stroke="#041127" stroke-width="0.85" />
+  <rect x="19.05" y="26.2" width="4.75" height="2.85" rx="0.55" stroke="#041127" stroke-width="1" />
+  <circle cx="20.05" cy="29.55" r="0.65" stroke="#041127" stroke-width="0.9" />
+  <circle cx="22.8" cy="29.55" r="0.65" stroke="#041127" stroke-width="0.9" />
+  <rect x="16.35" y="9.15" width="9.8" height="5.85" rx="1.25" stroke="#041127" stroke-width="1.05" />
+  <path d="M21.25 15L19.75 18.35L22.75 18.35Z" stroke="#041127" stroke-width="1" stroke-linejoin="round" />
+</svg>

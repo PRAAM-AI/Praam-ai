@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="icon" viewBox="0 0 32 32" fill="none" focusable="false">
+  <rect
+    x="5.5"
+    y="5.5"
+    width="9"
+    height="9"
+    rx="2"
+    stroke="#041127"
+    stroke-width="1.2"
+  />
+  <rect
+    x="17.5"
+    y="5.5"
+    width="9"
+    height="9"
+    rx="2"
+    stroke="#041127"
+    stroke-width="1.2"
+  />
+  <rect
+    x="5.5"
+    y="17.5"
+    width="9"
+    height="9"
+    rx="2"
+    stroke="#041127"
+    stroke-width="1.2"
+  />
+  <rect
+    x="17.5"
+    y="17.5"
+    width="9"
+    height="9"
+    rx="2"
+    stroke="#041127"
+    stroke-width="1.2"
+  />
+  <path d="M14.5 10h3M10 14.5v3M22 14.5v3M14.5 22h3" stroke="#041127" stroke-width="1.1" stroke-linecap="round" />
+</svg>
