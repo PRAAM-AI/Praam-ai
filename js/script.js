@@ -23,6 +23,127 @@ function scrollToHash(hash, behavior = "smooth") {
   return true;
 }
 
+/** Solutions carousel + PRISM deep-dive panel (only visible on PRISM slide). Runs before hash scroll. */
+(() => {
+  const prismPanel = document.getElementById("prism");
+  const PRISM_SLIDE_INDEX = 1;
+
+  const root = document.getElementById("solutions-carousel");
+  const track = document.getElementById("solutions-carousel-track");
+  const status = document.getElementById("solutions-carousel-status");
+  const viewport = root?.querySelector(".case-carousel-viewport");
+  const prevBtn = root?.querySelector("[data-solutions-carousel-prev]");
+  const nextBtn = root?.querySelector("[data-solutions-carousel-next]");
+
+  if (!root || !track || !viewport) return;
+
+  const slides = Array.from(track.querySelectorAll(".solutions-carousel-slide"));
+  const count = slides.length;
+  if (count === 0) return;
+
+  let index = 0;
+  const slideFraction = 100 / count;
+
+  let swipeStartX = 0;
+  let swipeStartY = 0;
+  let swipeTracking = false;
+
+  function applyTransform() {
+    track.style.transform = `translate3d(-${slideFraction * index}%, 0, 0)`;
+  }
+
+  function announce() {
+    if (!status) return;
+    const title = slides[index]?.querySelector("h3")?.textContent?.trim() || "";
+    status.textContent = `Solution ${index + 1} of ${count}: ${title}`;
+  }
+
+  function syncPrismPanel() {
+    if (!prismPanel) return;
+    if (index === PRISM_SLIDE_INDEX) {
+      prismPanel.removeAttribute("hidden");
+    } else {
+      const flowDialog = document.getElementById("prism-flow-dialog");
+      if (flowDialog?.open) flowDialog.close();
+      prismPanel.setAttribute("hidden", "");
+    }
+  }
+
+  function goTo(i) {
+    index = ((i % count) + count) % count;
+    applyTransform();
+    announce();
+    syncPrismPanel();
+  }
+
+  prevBtn?.addEventListener("click", () => goTo(index - 1));
+  nextBtn?.addEventListener("click", () => goTo(index + 1));
+
+  viewport.setAttribute("tabindex", "0");
+  viewport.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goTo(index - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goTo(index + 1);
+    }
+  });
+
+  viewport.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    swipeTracking = true;
+    swipeStartX = event.clientX;
+    swipeStartY = event.clientY;
+    try {
+      viewport.setPointerCapture(event.pointerId);
+    } catch {
+      /* ignore */
+    }
+  });
+
+  viewport.addEventListener("pointerup", (event) => {
+    if (!swipeTracking) return;
+    swipeTracking = false;
+    try {
+      viewport.releasePointerCapture(event.pointerId);
+    } catch {
+      /* ignore */
+    }
+    const dx = event.clientX - swipeStartX;
+    const dy = event.clientY - swipeStartY;
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
+    if (dx < 0) {
+      goTo(index + 1);
+    } else {
+      goTo(index - 1);
+    }
+  });
+
+  viewport.addEventListener("pointercancel", () => {
+    swipeTracking = false;
+  });
+
+  function syncSolutionsFromHash() {
+    const h = window.location.hash;
+    if (h === "#how-it-works") goTo(0);
+    else if (h === "#prism") goTo(1);
+  }
+
+  window.addEventListener("hashchange", syncSolutionsFromHash, true);
+
+  const initial = window.location.hash;
+  if (initial === "#how-it-works") {
+    goTo(0);
+  } else if (initial === "#prism") {
+    goTo(1);
+  } else {
+    applyTransform();
+    announce();
+    syncPrismPanel();
+  }
+})();
+
 /** Opening e.g. /#home or reflow after min-heights: browser scroll can run too early. */
 function applyHashFromLocation() {
   const { hash } = window.location;
@@ -76,11 +197,12 @@ document.addEventListener(
 );
 
 const updateActiveNav = () => {
-  const offset = window.scrollY + 180;
+  const y = window.scrollY + 180;
   let currentId = "";
 
   for (const section of sections) {
-    if (offset >= section.offsetTop) {
+    const top = section.getBoundingClientRect().top + window.scrollY;
+    if (y >= top) {
       currentId = section.id;
     }
   }
@@ -133,4 +255,135 @@ document.querySelector("#contact-form")?.addEventListener("submit", (event) => {
     button.disabled = false;
   }, 2200);
 });
+
+/** Case studies: horizontal carousel (prev / next, swipe, circular; sync #knowledge-studio). */
+(() => {
+  const root = document.getElementById("case-carousel");
+  const track = document.getElementById("case-carousel-track");
+  const status = document.getElementById("case-carousel-status");
+  const viewport = root?.querySelector(".case-carousel-viewport");
+  const prevBtn = root?.querySelector("[data-carousel-prev]");
+  const nextBtn = root?.querySelector("[data-carousel-next]");
+
+  if (!root || !track || !viewport) return;
+
+  const slides = Array.from(track.querySelectorAll(".case-card"));
+  const count = slides.length;
+  if (count === 0) return;
+
+  const knowledgeIndex = Math.max(0, slides.findIndex((el) => el.id === "knowledge-studio"));
+  let index = 0;
+  const slideFraction = 100 / count;
+
+  let swipeStartX = 0;
+  let swipeStartY = 0;
+  let swipeTracking = false;
+
+  function applyTransform() {
+    track.style.transform = `translate3d(-${slideFraction * index}%, 0, 0)`;
+  }
+
+  function announce() {
+    if (!status) return;
+    const title = slides[index]?.querySelector("h3")?.textContent?.trim() || "";
+    status.textContent = `Case study ${index + 1} of ${count}: ${title}`;
+  }
+
+  function goTo(i) {
+    index = ((i % count) + count) % count;
+    applyTransform();
+    announce();
+  }
+
+  prevBtn?.addEventListener("click", () => goTo(index - 1));
+  nextBtn?.addEventListener("click", () => goTo(index + 1));
+
+  function syncFromHash() {
+    if (window.location.hash === "#knowledge-studio") {
+      goTo(knowledgeIndex);
+    }
+  }
+
+  window.addEventListener("hashchange", syncFromHash);
+
+  viewport.setAttribute("tabindex", "0");
+  viewport.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      goTo(index - 1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      goTo(index + 1);
+    }
+  });
+
+  viewport.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    swipeTracking = true;
+    swipeStartX = event.clientX;
+    swipeStartY = event.clientY;
+    try {
+      viewport.setPointerCapture(event.pointerId);
+    } catch {
+      /* ignore */
+    }
+  });
+
+  viewport.addEventListener("pointerup", (event) => {
+    if (!swipeTracking) return;
+    swipeTracking = false;
+    try {
+      viewport.releasePointerCapture(event.pointerId);
+    } catch {
+      /* ignore */
+    }
+    const dx = event.clientX - swipeStartX;
+    const dy = event.clientY - swipeStartY;
+    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
+    if (dx < 0) {
+      goTo(index + 1);
+    } else {
+      goTo(index - 1);
+    }
+  });
+
+  viewport.addEventListener("pointercancel", () => {
+    swipeTracking = false;
+  });
+
+  if (window.location.hash === "#knowledge-studio") {
+    goTo(knowledgeIndex);
+  } else {
+    applyTransform();
+    announce();
+  }
+})();
+
+/** PRISM section: native dialog popup for end-to-end flow overview. */
+(() => {
+  const dialog = document.getElementById("prism-flow-dialog");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+
+  const openers = document.querySelectorAll("[data-prism-dialog-open]");
+  const closers = dialog.querySelectorAll("[data-prism-dialog-close]");
+
+  function openDialog() {
+    try {
+      dialog.showModal();
+    } catch {
+      /* already open */
+    }
+  }
+
+  function closeDialog() {
+    dialog.close();
+  }
+
+  openers.forEach((btn) => btn.addEventListener("click", openDialog));
+  closers.forEach((btn) => btn.addEventListener("click", closeDialog));
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeDialog();
+  });
+})();
 
