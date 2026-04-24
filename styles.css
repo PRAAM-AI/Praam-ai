@@ -967,7 +967,8 @@ a.hero-product-link:hover {
   font-weight: 800;
 }
 
-#solutions .prism-dialog {
+#solutions .prism-dialog,
+body .site-detail-dialog {
   margin: auto;
   padding: 0;
   max-width: min(40rem, 94vw);
@@ -977,12 +978,18 @@ a.hero-product-link:hover {
   color: inherit;
 }
 
-#solutions .prism-dialog::backdrop {
+body .site-detail-dialog--case {
+  max-width: min(44rem, 96vw);
+}
+
+#solutions .prism-dialog::backdrop,
+body .site-detail-dialog::backdrop {
   background: rgba(7, 14, 28, 0.52);
   backdrop-filter: blur(3px);
 }
 
-#solutions .prism-dialog-surface {
+#solutions .prism-dialog-surface,
+body .site-detail-dialog-surface {
   position: relative;
   padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1rem, 2.5vw, 1.5rem) clamp(1.1rem, 2vw, 1.35rem);
   border-radius: var(--radius-xl);
@@ -993,7 +1000,12 @@ a.hero-product-link:hover {
   overflow: auto;
 }
 
-#solutions .prism-dialog-x {
+body .site-detail-dialog--case .site-detail-dialog-surface {
+  max-height: min(90vh, 44rem);
+}
+
+#solutions .prism-dialog-x,
+body .site-detail-dialog-x {
   position: absolute;
   top: 0.55rem;
   right: 0.55rem;
@@ -1012,22 +1024,47 @@ a.hero-product-link:hover {
   transition: background 150ms ease, color 150ms ease;
 }
 
-#solutions .prism-dialog-x:hover {
+#solutions .prism-dialog-x:hover,
+body .site-detail-dialog-x:hover {
   color: var(--blue-800);
   background: rgba(44, 135, 255, 0.12);
 }
 
-#solutions .prism-dialog-x:focus-visible {
+#solutions .prism-dialog-x:focus-visible,
+body .site-detail-dialog-x:focus-visible {
   outline: 2px solid var(--blue-700);
   outline-offset: 2px;
 }
 
-#solutions .prism-dialog-title {
+#solutions .prism-dialog-title,
+body .site-detail-dialog-title {
   margin: 0 2.25rem 0.5rem 0;
   font-size: clamp(1.15rem, 2.4vw, 1.45rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--text);
+}
+
+body .site-detail-dialog-body {
+  margin: 0 0 1rem;
+}
+
+/* Cloned “How it works” in dialog is outside `#solutions-carousel` — keep pipeline readable */
+#solution-how-dialog-body .solutions-workflow-row {
+  margin-top: 0.55rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem 0.45rem;
+}
+
+#solution-how-dialog-body .solutions-workflow-row .workflow-step {
+  max-width: none;
+}
+
+#solution-how-dialog-body .solutions-workflow-row .workflow-arrow {
+  transform: rotate(90deg);
+  padding: 0.08rem 0;
+  align-self: center;
 }
 
 #solutions .prism-dialog-lead {
@@ -1070,12 +1107,45 @@ a.hero-product-link:hover {
   color: var(--blue-800);
 }
 
-#solutions .prism-dialog-footer {
+#solutions .prism-dialog-footer,
+body .site-detail-dialog-footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 0.65rem;
   align-items: center;
   margin: 0;
+}
+
+/* Progressive disclosure: less scrolling on tablets / small laptops + phones */
+.solution-how-actions,
+.case-detail-actions {
+  display: none;
+  margin: 0.65rem 0 0;
+}
+
+.case-detail-actions {
+  margin: 0 0 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .solution-how-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  #solutions #solutions-carousel .solutions-merge-how.how-inline--aside {
+    display: none !important;
+  }
+
+  .case-detail-actions {
+    display: block;
+  }
+
+  .case-detail-bundle {
+    display: none !important;
+  }
 }
 
 #solutions #solutions-carousel .solutions-merge-how .how-inline-title {

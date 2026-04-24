@@ -144,6 +144,86 @@ function scrollToHash(hash, behavior = "smooth") {
   }
 })();
 
+/** Solutions “How it works” + case-study depth: popups on narrow viewports (see styles). */
+(() => {
+  const solDialog = document.getElementById("solution-how-dialog");
+  const solBody = document.getElementById("solution-how-dialog-body");
+  const solTitle = document.getElementById("solution-how-dialog-title");
+  if (solDialog && solBody && solTitle && typeof solDialog.showModal === "function") {
+    const closeSol = () => {
+      try {
+        solDialog.close();
+      } catch {
+        /* noop */
+      }
+    };
+
+    document.querySelectorAll("[data-solution-how-open]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const slide = btn.closest(".solutions-carousel-slide");
+        const source = slide?.querySelector(".solutions-merge-how");
+        if (!source) return;
+        const t = source.querySelector(".how-inline-title")?.textContent?.trim();
+        solTitle.textContent = t || "How it works";
+        solBody.replaceChildren();
+        const clone = source.cloneNode(true);
+        clone.removeAttribute("id");
+        clone.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"));
+        solBody.appendChild(clone);
+        try {
+          solDialog.showModal();
+        } catch {
+          /* noop */
+        }
+      });
+    });
+
+    solDialog.querySelectorAll("[data-detail-dialog-close]").forEach((b) => b.addEventListener("click", closeSol));
+    solDialog.addEventListener("click", (event) => {
+      if (event.target === solDialog) closeSol();
+    });
+  }
+
+  const caseDialog = document.getElementById("case-detail-dialog");
+  const caseBody = document.getElementById("case-detail-dialog-body");
+  const caseTitle = document.getElementById("case-detail-dialog-title");
+  if (caseDialog && caseBody && caseTitle && typeof caseDialog.showModal === "function") {
+    const closeCase = () => {
+      try {
+        caseDialog.close();
+      } catch {
+        /* noop */
+      }
+    };
+
+    document.querySelectorAll("[data-case-detail-open]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-case-detail-open");
+        const source = id ? document.getElementById(id) : null;
+        if (!source) return;
+        const card = btn.closest(".case-card");
+        const heading = card?.querySelector(".case-body h3");
+        caseTitle.textContent = heading?.textContent?.trim() || "Case study";
+        caseBody.replaceChildren();
+        const clone = source.cloneNode(true);
+        clone.removeAttribute("id");
+        clone.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"));
+        caseBody.appendChild(clone);
+        try {
+          caseDialog.showModal();
+        } catch {
+          /* noop */
+        }
+      });
+    });
+
+    caseDialog.querySelectorAll("[data-case-detail-dialog-close]").forEach((b) => b.addEventListener("click", closeCase));
+    caseDialog.addEventListener("click", (event) => {
+      if (event.target === caseDialog) closeCase();
+    });
+  }
+})();
+
 /** Opening e.g. /#home or reflow after min-heights: browser scroll can run too early. */
 function applyHashFromLocation() {
   const { hash } = window.location;

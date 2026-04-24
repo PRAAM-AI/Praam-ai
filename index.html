@@ -175,6 +175,17 @@
                               Local Docker (<code>make</code> / compose) for pilots; optional Kubernetes ingress and managed Postgres when your ops team is ready.
                             </p>
                             <p class="info-card-cta-line"><a class="case-link" href="#contact">Book a demo →</a></p>
+                            <p class="solution-how-actions">
+                              <button
+                                type="button"
+                                class="btn btn-ghost solution-how-open"
+                                data-solution-how-open
+                                aria-haspopup="dialog"
+                                aria-controls="solution-how-dialog"
+                              >
+                                How it works <span class="btn-arrow" aria-hidden="true">↗</span>
+                              </button>
+                            </p>
                           </div>
                           <div
                             class="how-inline how-inline--aside solutions-merge-how"
@@ -251,6 +262,17 @@
                             <p class="info-card-cta-line">
                               <a class="case-link" href="#prism">Capability map →</a>
                               <a class="case-link" href="#contact">Book a demo →</a>
+                            </p>
+                            <p class="solution-how-actions">
+                              <button
+                                type="button"
+                                class="btn btn-ghost solution-how-open"
+                                data-solution-how-open
+                                aria-haspopup="dialog"
+                                aria-controls="solution-how-dialog"
+                              >
+                                How it works <span class="btn-arrow" aria-hidden="true">↗</span>
+                              </button>
                             </p>
                           </div>
                           <div class="how-inline how-inline--aside solutions-merge-how" aria-labelledby="sol-2-how-heading">
@@ -329,6 +351,17 @@
                               <a class="case-link" href="#knowledge-studio">Case study →</a>
                               <a class="case-link" href="#contact">Book a demo →</a>
                             </p>
+                            <p class="solution-how-actions">
+                              <button
+                                type="button"
+                                class="btn btn-ghost solution-how-open"
+                                data-solution-how-open
+                                aria-haspopup="dialog"
+                                aria-controls="solution-how-dialog"
+                              >
+                                How it works <span class="btn-arrow" aria-hidden="true">↗</span>
+                              </button>
+                            </p>
                           </div>
                           <div class="how-inline how-inline--aside solutions-merge-how" aria-labelledby="sol-3-how-heading">
                             <div class="section-head how-inline-head">
@@ -380,6 +413,17 @@
               </div>
               <p id="solutions-carousel-status" class="case-carousel-status sr-only" aria-live="polite" aria-atomic="true"></p>
             </div>
+
+            <dialog id="solution-how-dialog" class="site-detail-dialog" aria-labelledby="solution-how-dialog-title">
+              <div class="site-detail-dialog-surface">
+                <button type="button" class="site-detail-dialog-x" data-detail-dialog-close aria-label="Close dialog">×</button>
+                <h2 id="solution-how-dialog-title" class="site-detail-dialog-title">How it works</h2>
+                <div id="solution-how-dialog-body" class="site-detail-dialog-body"></div>
+                <p class="site-detail-dialog-footer">
+                  <button type="button" class="btn btn-primary" data-detail-dialog-close>Close</button>
+                </p>
+              </div>
+            </dialog>
 
             <div id="prism" class="prism-panel" hidden aria-labelledby="prism-cap-heading">
               <div class="section-head center prism-panel-head">
@@ -537,6 +581,18 @@
                   <h3 id="case-proposals-heading">From two-week scrambles to governed first drafts</h3>
                   <p class="case-hook">Cutting proposal turnaround from weeks to days with grounded AI on our own knowledge — every line traceable to approved docs.</p>
                   <p class="case-meta">B2B professional services · ~15 capture &amp; sales engineers</p>
+                  <p class="case-detail-actions">
+                    <button
+                      type="button"
+                      class="btn btn-ghost case-detail-open"
+                      data-case-detail-open="case-detail-bundle-grounded"
+                      aria-haspopup="dialog"
+                      aria-controls="case-detail-dialog"
+                    >
+                      Full case story <span class="btn-arrow" aria-hidden="true">↗</span>
+                    </button>
+                  </p>
+                  <div class="case-detail-bundle" id="case-detail-bundle-grounded">
                   <div class="case-psr">
                     <div class="case-psr-block">
                       <strong>Context</strong>
@@ -579,6 +635,7 @@
                     <div class="case-visual-tile">Editor + sources</div>
                   </div>
                   <p class="case-screenshot-note">Replace tiles with 1–2 real screenshots when your demo UI is ready (before/after timeline optional).</p>
+                  </div>
                   <blockquote class="case-quote">
                     <p>“For the first time we could walk exec review with citations open — not a slide deck of promises.”</p>
                     <footer>— Director of capture (anonymized)</footer>
@@ -595,6 +652,18 @@
                   <h3 id="case-prism-heading">From inbox RFQs to award-ready quotes without losing auditability</h3>
                   <p class="case-hook">PRISM turns fragmented email and spreadsheets into one governed thread — structured lines, comparable vendor quotes, and a clear path to ERP prep.</p>
                   <p class="case-meta">Aviation MRO / parts sourcing (composite) · ~22 procurement &amp; SCE staff</p>
+                  <p class="case-detail-actions">
+                    <button
+                      type="button"
+                      class="btn btn-ghost case-detail-open"
+                      data-case-detail-open="case-detail-bundle-prism"
+                      aria-haspopup="dialog"
+                      aria-controls="case-detail-dialog"
+                    >
+                      Full case story <span class="btn-arrow" aria-hidden="true">↗</span>
+                    </button>
+                  </p>
+                  <div class="case-detail-bundle" id="case-detail-bundle-prism">
                   <div class="case-psr">
                     <div class="case-psr-block">
                       <strong>Context</strong>
@@ -647,6 +716,7 @@
                     <div class="case-visual-tile">Quote compare</div>
                   </div>
                   <p class="case-screenshot-note">Add 2–4 screenshots when allowed: ops console, RFQ, comparison, settings/audit.</p>
+                  </div>
                   <blockquote class="case-quote">
                     <p>“We stopped arguing about which spreadsheet was ‘the truth’ — the system of record for the pursuit was obvious.”</p>
                     <footer>— Head of procurement, regional MRO (anonymized)</footer>
@@ -667,6 +737,18 @@
                     from chat → edit → export.
                   </p>
                   <p class="case-meta">Global ops &amp; GRC (composite) · ~40 L1/L2 support and policy analysts</p>
+                  <p class="case-detail-actions">
+                    <button
+                      type="button"
+                      class="btn btn-ghost case-detail-open"
+                      data-case-detail-open="case-detail-bundle-knowledge"
+                      aria-haspopup="dialog"
+                      aria-controls="case-detail-dialog"
+                    >
+                      Full case story <span class="btn-arrow" aria-hidden="true">↗</span>
+                    </button>
+                  </p>
+                  <div class="case-detail-bundle" id="case-detail-bundle-knowledge">
                   <div class="case-psr">
                     <div class="case-psr-block">
                       <strong>Context</strong>
@@ -718,6 +800,7 @@
                     <div class="case-visual-tile">Editor workspace</div>
                   </div>
                   <p class="case-screenshot-note">Add screenshots when ready: conversation with citations, editor export, and admin collection scope.</p>
+                  </div>
                   <blockquote class="case-quote">
                     <p>“We finally had one surface where ‘show your work’ meant a link to the clause — not a screenshot from someone’s inbox.”</p>
                     <footer>— Head of operational risk (anonymized)</footer>
@@ -743,6 +826,17 @@
               <p id="case-carousel-status" class="case-carousel-status sr-only" aria-live="polite" aria-atomic="true"></p>
             </div>
           </div>
+
+          <dialog id="case-detail-dialog" class="site-detail-dialog site-detail-dialog--case" aria-labelledby="case-detail-dialog-title">
+            <div class="site-detail-dialog-surface">
+              <button type="button" class="site-detail-dialog-x" data-case-detail-dialog-close aria-label="Close dialog">×</button>
+              <h2 id="case-detail-dialog-title" class="site-detail-dialog-title">Case study</h2>
+              <div id="case-detail-dialog-body" class="site-detail-dialog-body"></div>
+              <p class="site-detail-dialog-footer">
+                <button type="button" class="btn btn-primary" data-case-detail-dialog-close>Close</button>
+              </p>
+            </div>
+          </dialog>
         </div>
       </section>
 
