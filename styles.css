@@ -401,7 +401,7 @@ a.hero-product-link:hover {
   min-height: 0;
   flex: 1 1 auto;
   object-fit: cover;
-  object-position: right center;
+  object-position: center;
   border-radius: var(--hero-art-radius);
 }
 
