@@ -464,6 +464,33 @@ a.hero-product-link:hover {
   transform: translateY(var(--panel-lift-soft));
 }
 
+/* Match hero-style dark panel look for primary sections. */
+#industries .section-panel,
+#solutions .section-panel,
+#case-studies .section-panel,
+#about .section-panel {
+  color: rgba(245, 252, 255, 0.92);
+  border-color: rgba(160, 230, 255, 0.12);
+  background:
+    radial-gradient(900px 420px at 70% 45%, rgba(44, 135, 255, 0.28), transparent 60%),
+    linear-gradient(135deg, #020516, var(--blue-800) 55%, #0a2a58);
+  box-shadow: var(--panel-shadow-hero);
+}
+
+#industries .section-head h2,
+#solutions .section-head h2,
+#case-studies .section-head h2,
+#about .section-head h2 {
+  color: rgba(245, 252, 255, 0.96);
+}
+
+#industries .section-subtitle,
+#solutions .section-subtitle,
+#case-studies .section-subtitle,
+#about .section-subtitle {
+  color: rgba(245, 252, 255, 0.72);
+}
+
 /* Widen panels vs. `.container` using a capped bleed so layout stays controllable on all widths. */
 .hero-panel,
 .section-panel {
@@ -593,6 +620,45 @@ a.hero-product-link:hover {
 #solutions .section-panel {
   padding-top: clamp(0.95rem, 2vw, 1.45rem);
   padding-bottom: clamp(2.75rem, 5.8vw, 3.95rem);
+}
+
+/* Solutions carousel: ensure text is readable on dark panel background. */
+#solutions #solutions-carousel .info-card,
+#solutions #solutions-carousel .info-card h3,
+#solutions #solutions-carousel .info-card p,
+#solutions #solutions-carousel .info-card .info-card-subline,
+#solutions #solutions-carousel .info-card .info-card-merge,
+#solutions #solutions-carousel .info-card--signature .info-card-list li,
+#solutions #solutions-carousel .info-card--carousel-slide .info-card-list li {
+  color: rgba(245, 252, 255, 0.86);
+}
+
+#solutions #solutions-carousel .info-icon {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: rgba(4, 17, 39, 0.95);
+}
+
+/* External <use> icons often ship with dark strokes; force light via currentColor. */
+#solutions #solutions-carousel .info-icon-svg {
+  color: rgba(245, 252, 255, 0.92);
+  stroke: currentColor;
+  fill: none;
+}
+
+#solutions #solutions-carousel .info-card-tag-sub,
+#solutions #solutions-carousel .info-card-tech-strip,
+#solutions #solutions-carousel .info-card-deploy-note,
+#solutions #solutions-carousel .workflow-step p {
+  color: rgba(245, 252, 255, 0.7);
+}
+
+#solutions #solutions-carousel .case-link {
+  color: rgba(210, 240, 255, 0.92);
+}
+
+#solutions #solutions-carousel .case-link:hover {
+  color: #fff;
 }
 
 /* Solutions: narrower cards, taller portrait shape */
@@ -1269,8 +1335,10 @@ body .site-detail-dialog-footer {
   padding: clamp(1.05rem, 2vw, 1.45rem);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(11, 16, 32, 0.1);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.88));
-  box-shadow: var(--shadow-soft);
+  background:
+    radial-gradient(640px 260px at 25% 20%, rgba(44, 135, 255, 0.18), transparent 60%),
+    linear-gradient(135deg, rgba(2, 5, 22, 0.78), rgba(4, 17, 39, 0.86));
+  box-shadow: 0 18px 42px rgba(2, 5, 22, 0.32);
   min-height: 0;
 }
 
@@ -1318,7 +1386,8 @@ body .site-detail-dialog-footer {
 }
 
 #solutions .how-inline--aside .workflow-step {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .info-card-tag {
@@ -1525,7 +1594,7 @@ body .site-detail-dialog-footer {
   max-width: 42rem;
   font-size: clamp(0.95rem, 1.65vw, 1.05rem);
   line-height: 1.55;
-  color: var(--muted);
+  color: rgba(245, 252, 255, 0.78);
 }
 
 #about .about-partner-panel .why-grid {
@@ -1554,8 +1623,16 @@ body .site-detail-dialog-footer {
   font-size: clamp(0.92rem, 1.55vw, 1.12rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text);
+  color: rgba(245, 252, 255, 0.96);
   line-height: 1.2;
+}
+
+#about .about-tech-head .section-kicker {
+  color: rgba(210, 240, 255, 0.85);
+}
+
+#about .about-tech-head .about-tech-subtitle {
+  color: rgba(245, 252, 255, 0.72);
 }
 
 #about .about-tech-head .about-tech-subtitle {
@@ -2382,6 +2459,33 @@ body .site-detail-dialog-footer {
   border-radius: var(--radius-lg);
   padding: 1rem 1rem 1.05rem;
   box-shadow: var(--shadow-soft);
+}
+
+/* About section uses dark panel: make "Why" tiles dark too. */
+#about .why-item {
+  background: rgba(2, 5, 22, 0.55);
+  border-color: rgba(160, 230, 255, 0.16);
+  box-shadow: 0 18px 42px rgba(2, 5, 22, 0.38);
+}
+
+#about .why-item h3 {
+  color: rgba(245, 252, 255, 0.96);
+}
+
+#about .why-item p {
+  color: rgba(245, 252, 255, 0.72);
+}
+
+#about .why-icon {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: rgba(4, 17, 39, 0.95);
+}
+
+#about .why-icon-svg {
+  color: rgba(4, 17, 39, 0.95);
+  stroke: currentColor !important;
+  fill: currentColor !important;
 }
 
 .why-icon {
