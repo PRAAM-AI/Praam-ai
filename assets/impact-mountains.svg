@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef4ff"/>
+    </linearGradient>
+    <linearGradient id="ridgeA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8e6ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#bcd3ff" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="ridgeB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe0ff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#a9c6ff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="360" fill="url(#sky)"/>
+
+  <!-- far mist -->
+  <path
+    d="M0 250 C120 210 230 215 340 245 C460 278 560 270 680 238 C820 201 930 208 1040 242 C1165 281 1290 270 1600 210 L1600 360 L0 360 Z"
+    fill="#d9e7ff"
+    opacity="0.35"
+  />
+
+  <!-- ridge left -->
+  <path
+    d="M0 310 L110 260 L170 275 L260 220 L320 245 L410 205 L500 250 L610 190 L720 255 L820 215 L930 265 L1010 235 L1130 270 L1230 240 L1350 275 L1465 250 L1600 285 L1600 360 L0 360 Z"
+    fill="url(#ridgeA)"
+    opacity="0.65"
+  />
+
+  <!-- ridge right -->
+  <path
+    d="M0 335 L150 300 L230 310 L340 280 L420 300 L520 265 L610 295 L720 260 L830 285 L940 270 L1060 300 L1180 275 L1285 295 L1395 275 L1510 295 L1600 280 L1600 360 L0 360 Z"
+    fill="url(#ridgeB)"
+    opacity="0.7"
+  />
+</svg>

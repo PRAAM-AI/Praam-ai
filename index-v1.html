@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praam AI | Document Automation &amp; Knowledge Studio</title>
+    <meta
+      name="description"
+      content="Automate document-heavy workflows with AI — OCR, extraction, validation, and actions. Knowledge Studio: grounded chat on your sources, plus pilots in 2–4 weeks."
+    />
+    <meta name="theme-color" content="#0b2d63" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="top" aria-hidden="true"></div>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="#home" aria-label="Praam AI home"
+          ><span class="brand-name">Praam <span class="brand-ai">AI</span></span></a
+        >
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#home">Home</a><a href="#industries">Industries</a><a href="#solutions">Solutions</a><a href="#case-studies">Case Studies</a
+          ><a href="#about">About Us</a><a href="#resources">Resources</a>
+        </nav>
+        <a class="btn btn-primary topbar-cta" href="#contact">Book a Demo</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="Hero">
+        <div class="container">
+          <div class="hero-panel">
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <h1>
+                  Automate Document-Heavy<br />
+                  <span>Workflows with AI</span>
+                </h1>
+                <p class="hero-subtitle">
+                  Extract, understand, and act on your business documents — reducing manual processing time by up to 60%. Teams query the same knowledge in
+                  <a href="#knowledge-studio" class="hero-product hero-product-link">Knowledge Studio</a>, our grounded chat surface on your policies and docs.
+                </p>
+                <p class="hero-subnote">Built for operations teams drowning in PDFs, scans, emails, and forms — not generic “AI strategy” slides.</p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#contact">Book a Demo <span class="btn-arrow" aria-hidden="true">→</span></a>
+                  <a class="btn btn-ghost" href="#how-it-works">See How It Works <span class="btn-arrow" aria-hidden="true">→</span></a>
+                </div>
+              </div>
+              <div class="hero-visual">
+                <div class="hero-visual-frame">
+                  <img
+                    class="hero-image"
+                    src="assets/hero-home-blend.png"
+                    alt="Document pipelines and Knowledge Studio: structured data, automation, and grounded chat"
+                    width="639"
+                    height="360"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="industries" aria-labelledby="industries-heading">
+        <div class="container">
+          <div class="section-panel">
+            <div class="section-head center">
+              <p class="section-kicker">INDUSTRIES WE SERVE</p>
+              <h2 id="industries-heading">AI Solutions Across Industries</h2>
+              <p class="section-subtitle">Document and workflow automation tailored to how your sector captures, reviews, and acts on information.</p>
+            </div>
+            <div class="industry-row">
+              <div class="industry-pill"><span class="industry-ico" aria-hidden="true">✈</span><span>Aerospace &amp; Manufacturing</span></div>
+              <div class="industry-pill"><span class="industry-ico" aria-hidden="true">🚗</span><span>Automotive</span></div>
+              <div class="industry-pill"><span class="industry-ico" aria-hidden="true">✚</span><span>Healthcare &amp; MedTech</span></div>
+              <div class="industry-pill"><span class="industry-ico" aria-hidden="true">₿</span><span>Finance &amp; Banking</span></div>
+              <div class="industry-pill"><span class="industry-ico" aria-hidden="true">🛒</span><span>Retail &amp; E-commerce</span></div>
+            </div>
+            <div class="industries-proof" id="proof" aria-labelledby="proof-heading">
+              <div class="section-head center proof-demo-head">
+                <p class="section-kicker">PROOF</p>
+                <h2 id="proof-heading">Real Business Impact</h2>
+                <p class="section-subtitle proof-demo-lead">Specific outcomes read as credible — vague ranges do not.</p>
+              </div>
+              <div class="impact-band impact-band--compact" role="region" aria-label="Example outcomes from document automation engagements">
+                <div class="impact-item">
+                  <div class="impact-value">6h → 1.5h</div>
+                  <div class="impact-label">Invoice time cut (example finance flow)</div>
+                </div>
+                <div class="impact-item">
+                  <div class="impact-value">15+ · 92%</div>
+                  <div class="impact-label">Fields extracted, high accuracy after validation</div>
+                </div>
+                <div class="impact-item">
+                  <div class="impact-value">70% · 40%</div>
+                  <div class="impact-label">Less manual effort · fewer rework errors</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-raised" id="solutions" aria-labelledby="solutions-heading">
+        <div class="container">
+          <div class="section-panel">
+            <div class="section-head center">
+              <p class="section-kicker">SOLUTIONS</p>
+              <h2 id="solutions-heading">AI Solutions That Deliver Outcomes</h2>
+            </div>
+            <div
+              id="solutions-carousel"
+              class="case-carousel solutions-carousel"
+              role="region"
+              aria-roledescription="carousel"
+              aria-label="Solutions"
+              data-case-count="3"
+            >
+              <div class="case-carousel-layout">
+                <button
+                  type="button"
+                  class="case-carousel-arrow case-carousel-arrow--prev"
+                  data-solutions-carousel-prev
+                  aria-controls="solutions-carousel-track"
+                  aria-label="Show previous solution"
+                >
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <div class="case-carousel-viewport">
+                  <div id="solutions-carousel-track" class="case-carousel-track">
+                    <div class="solutions-carousel-slide">
+                      <article
+                        class="info-card info-card--signature"
+                        id="solution-grounded-proposals"
+                        aria-labelledby="sol-doc-heading"
+                      >
+                        <div class="solutions-card-columns">
+                          <div class="solutions-card-main">
+                            <div class="info-card-tag-stack">
+                              <p class="info-card-tag">Solution 1</p>
+                              <p class="info-card-tag-sub">RFP &amp; capture</p>
+                            </div>
+                            <div class="solutions-card-main-row">
+                              <div class="info-icon" aria-hidden="true">
+                                <svg class="info-icon-svg" viewBox="0 0 32 32" width="28" height="28" role="presentation" focusable="false">
+                                  <use href="assets/icons/icon-intelligent-automation.svg#icon" />
+                                </svg>
+                              </div>
+                              <div class="solutions-card-titles">
+                                <h3 id="sol-doc-heading">Grounded proposal &amp; RFP workspace</h3>
+                                <p class="info-card-subline" id="signature-heading">AI-assisted answers tied to your library — not the open web</p>
+                              </div>
+                            </div>
+                            <p class="info-card-merge">
+                              Praam helps teams draft proposals and RFP responses from the documents you already trust: past wins, security packs, SOPs, and product
+                              sheets. Retrieval stays scoped, generation stays citeable, and reviewers can verify every paragraph against source chunks before anything
+                              ships.
+                            </p>
+                            <ul class="info-card-list" aria-label="Why this solution is different">
+                              <li>Retrieval limited to user-selected document IDs per pursuit — governance by design.</li>
+                              <li>Citations to retrieved passages, not free-floating claims — anti-hallucination where it matters.</li>
+                              <li>Audit-friendly logging and environment separation for compliance-minded buyers.</li>
+                              <li>Shipped on a stack operators recognize: FastAPI, React (Vite), PostgreSQL + pgvector, Docker — optional EKS / Terraform on AWS.</li>
+                            </ul>
+                            <p class="info-card-tech-strip" aria-label="Primary technologies">
+                              Python · FastAPI · React · PostgreSQL · pgvector · OpenAI / Azure OpenAI · Docker
+                            </p>
+                            <p class="info-card-deploy-note">
+                              Local Docker (<code>make</code> / compose) for pilots; optional Kubernetes ingress and managed Postgres when your ops team is ready.
+                            </p>
+                            <p class="info-card-cta-line"><a class="case-link" href="#contact">Book a demo →</a></p>
+                            <p class="solution-how-actions">
+                              <button
+                                type="button"
+                                class="btn btn-ghost solution-how-open"
+                                data-solution-how-open
+                                aria-haspopup="dialog"
+                                aria-controls="solution-how-dialog"
+                              >
+                                How it works <span class="btn-arrow" aria-hidden="true">↗</span>
+                              </button>
+                            </p>
+                          </div>
+                          <div
+                            class="how-inline how-inline--aside solutions-merge-how"
+                            id="how-it-works"
+                            aria-labelledby="how-heading"
+                          >
+                            <div class="section-head how-inline-head">
+                              <p class="section-kicker">How it works</p>
+                              <h3 id="how-heading" class="how-inline-title">From governed corpus to export-ready sections</h3>
+                              <p class="section-subtitle how-inline-sub">Ingest → chunk &amp; embed → retrieve → generate → review &amp; export.</p>
+                            </div>
+                            <div class="workflow-track solutions-workflow-row" aria-label="Grounded proposal pipeline steps">
+                            <div class="workflow-step">
+                              <h3>Ingest</h3>
+                              <p>Upload the RFP package and your knowledge base (PDF/DOCX) into a corpus with access controls.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Chunk &amp; embed</h3>
+                              <p>Documents split into chunks; embeddings land in Postgres for similarity search.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Retrieve</h3>
+                              <p>pgvector retrieval filtered strictly by the document IDs the user chose for this response.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Generate</h3>
+                              <p>The LLM drafts structured sections using only that retrieved context — aligned to your outline.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Review &amp; export</h3>
+                              <p>UI shows sources, confidence, and edits; export to DOCX when legal and capture sign off.</p>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="solutions-carousel-slide">
+                      <article class="info-card info-card--carousel-slide" id="solution-prism" aria-labelledby="sol-2-heading">
+                        <div class="solutions-card-columns">
+                          <div class="solutions-card-main">
+                            <div class="info-card-tag-stack">
+                              <p class="info-card-tag">Solution 2</p>
+                              <p class="info-card-tag-sub">PRISM · procurement</p>
+                            </div>
+                            <div class="solutions-card-main-row">
+                              <div class="info-icon" aria-hidden="true">
+                                <svg class="info-icon-svg" viewBox="0 0 32 32" width="28" height="28" role="presentation" focusable="false">
+                                  <use href="assets/icons/icon-machine-learning.svg#icon" />
+                                </svg>
+                              </div>
+                              <div class="solutions-card-titles">
+                                <h3 id="sol-2-heading">PRISM — procurement intelligence &amp; sourcing</h3>
+                                <p class="info-card-subline">Email and attachments become structured requirements, governed RFQs, comparable quotes, and ERP-ready handoff</p>
+                              </div>
+                            </div>
+                            <p class="info-card-merge">
+                              AI assists drafting and parsing; deterministic rules, validation, and human gates decide what ships. Status is visible from intake through
+                              award — built for audit-heavy sourcing, not spreadsheet heroics.
+                            </p>
+                            <ul class="info-card-list" aria-label="PRISM differentiators">
+                              <li>Deterministic governance over AI — policy and approvals, not unchecked generation.</li>
+                              <li>Traceability for regulated and aviation-style sourcing — append-only audit and RBAC.</li>
+                              <li>Human-in-the-loop on exceptions and every low-confidence extraction path.</li>
+                              <li>Cloud-ready, portable operations — async workers, retries, and observability your IT team can stand behind.</li>
+                            </ul>
+                            <p class="info-card-tech-strip" aria-label="Integration surface">
+                              Email · structured intake · vendor RFQs · quote normalization · approvals · export / ERP prep
+                            </p>
+                            <p class="info-card-cta-line">
+                              <a class="case-link" href="#prism">Capability map →</a>
+                              <a class="case-link" href="#contact">Book a demo →</a>
+                            </p>
+                            <p class="solution-how-actions">
+                              <button
+                                type="button"
+                                class="btn btn-ghost solution-how-open"
+                                data-solution-how-open
+                                aria-haspopup="dialog"
+                                aria-controls="solution-how-dialog"
+                              >
+                                How it works <span class="btn-arrow" aria-hidden="true">↗</span>
+                              </button>
+                            </p>
+                          </div>
+                          <div class="how-inline how-inline--aside solutions-merge-how" aria-labelledby="sol-2-how-heading">
+                            <div class="section-head how-inline-head">
+                              <p class="section-kicker">How it works</p>
+                              <h3 id="sol-2-how-heading" class="how-inline-title">From inbox to award-ready package</h3>
+                              <p class="section-subtitle how-inline-sub">Email in → structure → shortlist → RFQ → responses → compare → approve → downstream.</p>
+                            </div>
+                            <div class="workflow-track solutions-workflow-row" aria-label="PRISM sourcing flow">
+                            <div class="workflow-step">
+                              <h3>Intake</h3>
+                              <p>Customer or supplier email and attachments land in a governed queue with authenticity checks.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Structure</h3>
+                              <p>Parts, quantities, dates, and incoterms become line items; low-confidence fields route to review.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>RFQ</h3>
+                              <p>Approved-supplier rules, shortlists, grouped RFQs, due dates, and auditable outbound previews.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Replies</h3>
+                              <p>Vendor replies parsed into normalized fields — price, lead time, alternates — with validation.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Award</h3>
+                              <p>Side-by-side comparison, approval gates, then export or ERP upload prep — without claiming full ERP replacement.</p>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="solutions-carousel-slide">
+                      <article
+                        class="info-card info-card--carousel-slide"
+                        id="solution-knowledge-studio"
+                        aria-labelledby="sol-3-heading"
+                      >
+                        <div class="solutions-card-columns">
+                          <div class="solutions-card-main">
+                            <div class="info-card-tag-stack">
+                              <p class="info-card-tag">Solution 3</p>
+                              <p class="info-card-tag-sub">Knowledge Studio</p>
+                            </div>
+                            <div class="solutions-card-main-row">
+                              <div class="info-icon" aria-hidden="true">
+                                <svg class="info-icon-svg" viewBox="0 0 32 32" width="28" height="28" role="presentation" focusable="false">
+                                  <use href="assets/icons/icon-data-analytics.svg#icon" />
+                                </svg>
+                              </div>
+                              <div class="solutions-card-titles">
+                                <h3 id="sol-3-heading">Knowledge Studio &amp; decision intelligence</h3>
+                                <p class="info-card-subline">Grounded chat, editor workspace, and citations on every answer you ship downstream</p>
+                              </div>
+                            </div>
+                            <p class="info-card-merge">
+                              Operators ask questions in natural language; retrieval and generation stay inside the collections and sensitivity tiers you allow. Answers
+                              carry passages, tables, and metadata so reviewers can verify — then export, alert, or hand off to automation without losing the paper trail.
+                            </p>
+                            <ul class="info-card-list" aria-label="Why Knowledge Studio is different">
+                              <li>Role-scoped corpora — not “the whole drive,” and not the public web.</li>
+                              <li>Citations to source chunks by default — not a confidence monologue.</li>
+                              <li>Editor-style workspace for refinement before policy, legal, or ops sign-off.</li>
+                              <li>Designed to sit next to your existing doc stores, identity, and logging — not a rip-and-replace knowledge base.</li>
+                            </ul>
+                            <p class="info-card-tech-strip" aria-label="Typical stack">
+                              Governed corpus · retrieval + LLM · citation UI · access control · audit-friendly logs
+                            </p>
+                            <p class="info-card-cta-line">
+                              <a class="case-link" href="#knowledge-studio">Case study →</a>
+                              <a class="case-link" href="#contact">Book a demo →</a>
+                            </p>
+                            <p class="solution-how-actions">
+                              <button
+                                type="button"
+                                class="btn btn-ghost solution-how-open"
+                                data-solution-how-open
+                                aria-haspopup="dialog"
+                                aria-controls="solution-how-dialog"
+                              >
+                                How it works <span class="btn-arrow" aria-hidden="true">↗</span>
+                              </button>
+                            </p>
+                          </div>
+                          <div class="how-inline how-inline--aside solutions-merge-how" aria-labelledby="sol-3-how-heading">
+                            <div class="section-head how-inline-head">
+                              <p class="section-kicker">How it works</p>
+                              <h3 id="sol-3-how-heading" class="how-inline-title">From your knowledge base to accountable decisions</h3>
+                              <p class="section-subtitle how-inline-sub">Ingest → Ask → Ground → Decide → Act. Citations end-to-end.</p>
+                            </div>
+                            <div class="workflow-track solutions-workflow-row" aria-label="Knowledge Studio workflow steps">
+                            <div class="workflow-step">
+                              <h3>Ingest</h3>
+                              <p>Policies, SOPs, FAQs, filings, and operational docs in a governed corpus with access controls.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Ask</h3>
+                              <p>Natural-language questions scoped by role, data sensitivity, and the collections you authorize.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Ground</h3>
+                              <p>Answers surface passages, tables, and metadata so reviewers can verify before anything ships downstream.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Decide</h3>
+                              <p>Summaries, comparisons, risk flags, and prioritization with reasoning you can trace to the underlying docs.</p>
+                            </div>
+                            <span class="workflow-arrow" aria-hidden="true">→</span>
+                            <div class="workflow-step">
+                              <h3>Act</h3>
+                              <p>Briefs, alerts, recommendations, or handoffs to owners — each with links back to the evidence that supported them.</p>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="case-carousel-arrow case-carousel-arrow--next"
+                  data-solutions-carousel-next
+                  aria-controls="solutions-carousel-track"
+                  aria-label="Show next solution"
+                >
+                  <span aria-hidden="true">›</span>
+                </button>
+              </div>
+              <p id="solutions-carousel-status" class="case-carousel-status sr-only" aria-live="polite" aria-atomic="true"></p>
+            </div>
+
+            <dialog id="solution-how-dialog" class="site-detail-dialog" aria-labelledby="solution-how-dialog-title">
+              <div class="site-detail-dialog-surface">
+                <button type="button" class="site-detail-dialog-x" data-detail-dialog-close aria-label="Close dialog">×</button>
+                <h2 id="solution-how-dialog-title" class="site-detail-dialog-title">How it works</h2>
+                <div id="solution-how-dialog-body" class="site-detail-dialog-body"></div>
+                <p class="site-detail-dialog-footer">
+                  <button type="button" class="btn btn-primary" data-detail-dialog-close>Close</button>
+                </p>
+              </div>
+            </dialog>
+
+            <div id="prism" class="prism-panel" hidden aria-labelledby="prism-cap-heading">
+              <div class="section-head center prism-panel-head">
+                <p class="section-kicker">PRISM · DEEP DIVE</p>
+                <h3 id="prism-cap-heading">Capability map for procurement &amp; sourcing teams</h3>
+                <p class="section-subtitle prism-panel-lead">
+                  Problem-led blocks you can scan — aligned with how PRISM runs in production: orchestration first, assistive AI second, humans on go/no-go.
+                </p>
+              </div>
+              <p class="prism-not-line">
+                <strong>What it’s not:</strong> a drop-in replacement for your ERP. PRISM focuses on sourcing intelligence and clean handoff — your system of record stays
+                the anchor.
+              </p>
+              <ul class="prism-who-strip" aria-label="Who PRISM is for">
+                <li>Procurement operations</li>
+                <li>Supply chain engineering (SCE)</li>
+                <li>Sourcing admins &amp; category managers</li>
+              </ul>
+              <div class="prism-swimlane" role="img" aria-label="Flow from customer to ERP: Customer or supplier email, then PRISM platform, then vendors, then approver, then export or ERP">
+                <div class="prism-swim-step"><span class="prism-swim-label">Customer / supplier</span><span class="prism-swim-detail">Email + attachments</span></div>
+                <span class="prism-swim-arrow" aria-hidden="true">→</span>
+                <div class="prism-swim-step prism-swim-step--accent"><span class="prism-swim-label">PRISM</span><span class="prism-swim-detail">Intake → RFQ → compare</span></div>
+                <span class="prism-swim-arrow" aria-hidden="true">→</span>
+                <div class="prism-swim-step"><span class="prism-swim-label">Vendors</span><span class="prism-swim-detail">RFQ &amp; quotes</span></div>
+                <span class="prism-swim-arrow" aria-hidden="true">→</span>
+                <div class="prism-swim-step"><span class="prism-swim-label">Approver</span><span class="prism-swim-detail">Gates &amp; audit</span></div>
+                <span class="prism-swim-arrow" aria-hidden="true">→</span>
+                <div class="prism-swim-step"><span class="prism-swim-label">Downstream</span><span class="prism-swim-detail">Export / ERP prep</span></div>
+              </div>
+              <p class="prism-popup-actions">
+                <button type="button" class="btn btn-ghost prism-popup-open" data-prism-dialog-open aria-haspopup="dialog" aria-controls="prism-flow-dialog">
+                  View end-to-end flow <span class="btn-arrow" aria-hidden="true">↗</span>
+                </button>
+              </p>
+              <dialog id="prism-flow-dialog" class="prism-dialog" aria-labelledby="prism-dialog-title">
+                <div class="prism-dialog-surface">
+                  <button type="button" class="prism-dialog-x" data-prism-dialog-close aria-label="Close dialog">×</button>
+                  <h2 id="prism-dialog-title" class="prism-dialog-title">PRISM — end-to-end flow</h2>
+                  <p class="prism-dialog-lead">
+                    Same swimlane as above, with a bit more room for walkthroughs and screen shares. Assistive AI drafts and parses; policy, validation, and humans own
+                    awards and outbound comms.
+                  </p>
+                  <div class="prism-dialog-swimlane" aria-hidden="true">
+                    <div class="prism-swim-step"><span class="prism-swim-label">Customer / supplier</span><span class="prism-swim-detail">Email + attachments</span></div>
+                    <span class="prism-swim-arrow">→</span>
+                    <div class="prism-swim-step prism-swim-step--accent"><span class="prism-swim-label">PRISM</span><span class="prism-swim-detail">Intake → RFQ → compare</span></div>
+                    <span class="prism-swim-arrow">→</span>
+                    <div class="prism-swim-step"><span class="prism-swim-label">Vendors</span><span class="prism-swim-detail">RFQ &amp; quotes</span></div>
+                    <span class="prism-swim-arrow">→</span>
+                    <div class="prism-swim-step"><span class="prism-swim-label">Approver</span><span class="prism-swim-detail">Gates &amp; audit</span></div>
+                    <span class="prism-swim-arrow">→</span>
+                    <div class="prism-swim-step"><span class="prism-swim-label">Downstream</span><span class="prism-swim-detail">Export / ERP prep</span></div>
+                  </div>
+                  <ol class="prism-dialog-steps">
+                    <li><strong>Intake</strong> — Authenticated email and attachments become a governed pursuit record.</li>
+                    <li><strong>Structure</strong> — Lines, parts, dates, and alternates extracted; low confidence queues for review.</li>
+                    <li><strong>Shortlist &amp; RFQ</strong> — Approved-supplier rules, grouped RFQs, due dates, auditable previews.</li>
+                    <li><strong>Replies</strong> — Vendor quotes normalized for apples-to-apples comparison.</li>
+                    <li><strong>Award &amp; handoff</strong> — Approvals, then export or ERP-ready package — not a full ERP swap.</li>
+                  </ol>
+                  <p class="prism-dialog-footer">
+                    <button type="button" class="btn btn-primary" data-prism-dialog-close>Close</button>
+                    <a class="btn btn-ghost" href="#contact">Book a demo <span class="btn-arrow" aria-hidden="true">→</span></a>
+                  </p>
+                </div>
+              </dialog>
+              <div class="prism-blocks">
+                <article class="prism-block">
+                  <h4 class="prism-block-title">Procurement orchestration</h4>
+                  <p>End-to-end path from requirement to award with status at each stage — no mystery state in inboxes.</p>
+                </article>
+                <article class="prism-block">
+                  <h4 class="prism-block-title">Intelligent intake</h4>
+                  <p>Turn customer or supplier email into structured lines (parts, qty, dates). AI drafts and parses; rules and reviewers catch low-confidence fields.</p>
+                </article>
+                <article class="prism-block">
+                  <h4 class="prism-block-title">Vendor sourcing &amp; RFQ</h4>
+                  <p>Approved-supplier policies, shortlists, grouped RFQs, due dates, and communication previews that stand up to audit.</p>
+                </article>
+                <article class="prism-block">
+                  <h4 class="prism-block-title">Quote comparison &amp; award</h4>
+                  <p>Normalized price, lead time, and availability; multi-vendor per part; approval required before award is recorded.</p>
+                </article>
+                <article class="prism-block">
+                  <h4 class="prism-block-title">Governance &amp; compliance</h4>
+                  <p>Human gates, deterministic validation, append-only audit trails, and RBAC — aligned with how regulated teams expect to work.</p>
+                </article>
+                <article class="prism-block">
+                  <h4 class="prism-block-title">Integrations</h4>
+                  <p>Email authenticity, export formats, and ERP upload prep — scoped to what you ship today; expand the integration list as connectors go live.</p>
+                </article>
+                <article class="prism-block">
+                  <h4 class="prism-block-title">Operations &amp; reliability</h4>
+                  <p>Async workers, retries, and observability so procurement keeps moving when volume spikes — details belong in a technical appendix, not a slogan.</p>
+                </article>
+              </div>
+              <div class="prism-faq" aria-labelledby="prism-faq-heading">
+                <h4 id="prism-faq-heading" class="prism-faq-heading">FAQ for technical buyers</h4>
+                <details class="prism-faq-item">
+                  <summary>Data residency &amp; PII</summary>
+                  <p>Deployment options match your region and data-classification policy; PII in email bodies is minimized, masked in logs where required, and retained per your retention rules.</p>
+                </details>
+                <details class="prism-faq-item">
+                  <summary>Models &amp; AI boundaries</summary>
+                  <p>Assistive models draft and parse under strict prompts and retrieval boundaries; no award or vendor communication ships without policy checks and human gates where your playbook requires them.</p>
+                </details>
+                <details class="prism-faq-item">
+                  <summary>Approval model</summary>
+                  <p>Configurable stages — e.g. buyer → category lead → finance — with immutable history of who released each outbound and each award recommendation.</p>
+                </details>
+                <details class="prism-faq-item">
+                  <summary>Integrations</summary>
+                  <p>Start from email and file export; ERP connectors and webhooks extend the same core events — ask for the current connector list on a security or architecture call.</p>
+                </details>
+              </div>
+              <p class="prism-panel-cta">
+                <a class="btn btn-primary" href="#contact">Book a demo <span class="btn-arrow" aria-hidden="true">→</span></a>
+                <a class="btn btn-ghost" href="#contact">Request a security brief <span class="btn-arrow" aria-hidden="true">→</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="case-studies" aria-labelledby="case-studies-heading">
+        <div class="container">
+          <div class="section-panel">
+            <div class="section-head center">
+              <p class="section-kicker">CASE STUDIES</p>
+              <h2 id="case-studies-heading">Real Use Cases. Measurable Results.</h2>
+            </div>
+            <div
+              id="case-carousel"
+              class="case-carousel"
+              role="region"
+              aria-roledescription="carousel"
+              aria-label="Case studies"
+              data-case-count="3"
+            >
+              <div class="case-carousel-layout">
+                <button
+                  type="button"
+                  class="case-carousel-arrow case-carousel-arrow--prev"
+                  data-carousel-prev
+                  aria-controls="case-carousel-track"
+                  aria-label="Show previous case study"
+                >
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <div class="case-carousel-viewport">
+                  <div id="case-carousel-track" class="case-carousel-track">
+              <article class="case-card" id="case-study-grounded-proposals" aria-labelledby="case-proposals-heading">
+                <div class="case-media case-media-proposals" role="img" aria-label="Knowledge panel and proposal editor with source citations"></div>
+                <div class="case-body">
+                  <h3 id="case-proposals-heading">From two-week scrambles to governed first drafts</h3>
+                  <p class="case-hook">Cutting proposal turnaround from weeks to days with grounded AI on our own knowledge — every line traceable to approved docs.</p>
+                  <p class="case-meta">B2B professional services · ~15 capture &amp; sales engineers</p>
+                  <p class="case-detail-actions">
+                    <button
+                      type="button"
+                      class="btn btn-ghost case-detail-open"
+                      data-case-detail-open="case-detail-bundle-grounded"
+                      aria-haspopup="dialog"
+                      aria-controls="case-detail-dialog"
+                    >
+                      Full case story <span class="btn-arrow" aria-hidden="true">↗</span>
+                    </button>
+                  </p>
+                  <div class="case-detail-bundle" id="case-detail-bundle-grounded">
+                  <div class="case-psr">
+                    <div class="case-psr-block">
+                      <strong>Context</strong>
+                      <p>
+                        Pursuits mixed boilerplate from old decks, ad-hoc web snippets, and PDFs scattered across drives. Tone drifted by author, and it was easy to
+                        miss RFP line items when deadlines stacked.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Problem</strong>
+                      <p>
+                        Long cycles with weak reuse of past wins; reviewers feared unsupported claims; answering “where did this sentence come from?” meant manual
+                        archaeology through attachments.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Constraints</strong>
+                      <p>
+                        Security required retrieval from an allow-listed document set only — no open corpus. Buyers needed citations to source chunks, support for
+                        OpenAI or Azure OpenAI, and deployment in their VPC (cloud) with audit-friendly request logging.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>What we built</strong>
+                      <p>
+                        Upload the RFP plus the pursuit-specific knowledge base → structured proposal sections with source-backed answers, confidence signals, and
+                        explicit user-selected document scope so generation stays governed end to end.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Results</strong>
+                      <p>
+                        Directionally: materially less time in first-draft assembly, fewer “prove it” revision rounds, and a consistent reviewer story — every section
+                        can be checked against cited chunks before submission. Export to DOCX fit existing legal redlines.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="case-visual-pair" aria-label="Placeholder for product screenshots">
+                    <div class="case-visual-tile">Knowledge panel</div>
+                    <div class="case-visual-tile">Editor + sources</div>
+                  </div>
+                  <p class="case-screenshot-note">Replace tiles with 1–2 real screenshots when your demo UI is ready (before/after timeline optional).</p>
+                  </div>
+                  <blockquote class="case-quote">
+                    <p>“For the first time we could walk exec review with citations open — not a slide deck of promises.”</p>
+                    <footer>— Director of capture (anonymized)</footer>
+                  </blockquote>
+                  <p class="case-link-row">
+                    <a class="case-link" href="#solution-grounded-proposals">How the architecture works →</a>
+                    <a class="case-link case-link--secondary" href="#contact">Book a demo →</a>
+                  </p>
+                </div>
+              </article>
+              <article class="case-card" id="case-study-prism" aria-labelledby="case-prism-heading">
+                <div class="case-media case-media-prism" role="img" aria-label="PRISM procurement flow from email intake to quote comparison"></div>
+                <div class="case-body">
+                  <h3 id="case-prism-heading">From inbox RFQs to award-ready quotes without losing auditability</h3>
+                  <p class="case-hook">PRISM turns fragmented email and spreadsheets into one governed thread — structured lines, comparable vendor quotes, and a clear path to ERP prep.</p>
+                  <p class="case-meta">Aviation MRO / parts sourcing (composite) · ~22 procurement &amp; SCE staff</p>
+                  <p class="case-detail-actions">
+                    <button
+                      type="button"
+                      class="btn btn-ghost case-detail-open"
+                      data-case-detail-open="case-detail-bundle-prism"
+                      aria-haspopup="dialog"
+                      aria-controls="case-detail-dialog"
+                    >
+                      Full case story <span class="btn-arrow" aria-hidden="true">↗</span>
+                    </button>
+                  </p>
+                  <div class="case-detail-bundle" id="case-detail-bundle-prism">
+                  <div class="case-psr">
+                    <div class="case-psr-block">
+                      <strong>Context</strong>
+                      <p>
+                        Requirements arrived as unstructured email and PDFs; teams tracked outreach in shared inboxes and side spreadsheets. ERP prep meant manual
+                        copy-paste and inconsistent fields — painful in a sector where traceability and approvals matter.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Problem</strong>
+                      <ul class="case-list">
+                        <li>Unstructured requirement email — parts, alternates, and dates buried in threads.</li>
+                        <li>Slow vendor outreach, follow-up, and no single place for RFQ status.</li>
+                        <li>Hard to compare quotes consistently across vendors and revisions.</li>
+                        <li>Compliance pressure: who approved what went out, and which quote line justified the award?</li>
+                      </ul>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>What we built</strong>
+                      <p>
+                        Intake and extraction with validation, approved-supplier shortlists, RFQ compose and tracking, parsing of vendor replies, comparison views,
+                        approval gates, and export / ERP-oriented handoff — AI assists drafting and parsing; rules and humans own decisions. We do not position this as
+                        full ERP replacement in production.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>How it runs</strong>
+                      <p>
+                        Email in → structured requirement → shortlist → RFQ → responses → review and approve → downstream export. Assistive models speed drafting and
+                        parsing; policy engines and named approvers control go/no-go.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Results</strong>
+                      <p>
+                        Directional outcomes: fewer missed fields on first pass, faster first RFQ to vendors, fewer manual copy-paste steps into ERP prep packages,
+                        and an audit trail reviewers could actually replay — quantitative benchmarks available under NDA for serious evaluations.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>What we’d do differently next</strong>
+                      <p>
+                        Earlier workspace model for multi-RFQ programs and tighter coupling to the customer’s preferred ERP upload templates from day one — lessons
+                        that now shape our implementation playbook.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="case-visual-pair" aria-label="Placeholder for product screenshots">
+                    <div class="case-visual-tile">Ops console</div>
+                    <div class="case-visual-tile">Quote compare</div>
+                  </div>
+                  <p class="case-screenshot-note">Add 2–4 screenshots when allowed: ops console, RFQ, comparison, settings/audit.</p>
+                  </div>
+                  <blockquote class="case-quote">
+                    <p>“We stopped arguing about which spreadsheet was ‘the truth’ — the system of record for the pursuit was obvious.”</p>
+                    <footer>— Head of procurement, regional MRO (anonymized)</footer>
+                  </blockquote>
+                  <p class="case-link-row">
+                    <a class="case-link" href="#solution-prism">PRISM solution overview →</a>
+                    <a class="case-link" href="#prism">Capability map →</a>
+                    <a class="case-link case-link--secondary" href="#contact">Book a demo →</a>
+                  </p>
+                </div>
+              </article>
+              <article id="knowledge-studio" class="case-card" aria-labelledby="knowledge-studio-heading">
+                <div class="case-media case-media-knowledge-studio" role="img" aria-label="Knowledge Studio chat over organizational knowledge"></div>
+                <div class="case-body">
+                  <h3 id="knowledge-studio-heading">One place for “what does our approved policy actually say?”</h3>
+                  <p class="case-hook">
+                    From Slack guesses to cited answers — Knowledge Studio grounds responses in the policies and runbooks your risk team already trusts, with a path
+                    from chat → edit → export.
+                  </p>
+                  <p class="case-meta">Global ops &amp; GRC (composite) · ~40 L1/L2 support and policy analysts</p>
+                  <p class="case-detail-actions">
+                    <button
+                      type="button"
+                      class="btn btn-ghost case-detail-open"
+                      data-case-detail-open="case-detail-bundle-knowledge"
+                      aria-haspopup="dialog"
+                      aria-controls="case-detail-dialog"
+                    >
+                      Full case story <span class="btn-arrow" aria-hidden="true">↗</span>
+                    </button>
+                  </p>
+                  <div class="case-detail-bundle" id="case-detail-bundle-knowledge">
+                  <div class="case-psr">
+                    <div class="case-psr-block">
+                      <strong>Context</strong>
+                      <p>
+                        Answers lived in Confluence, PDFs in SharePoint, and “tribal knowledge” in long Slack threads. Generic chat tools were either blocked or
+                        hallucinated — neither was acceptable for customer-facing or regulator-touching topics.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Problem</strong>
+                      <ul class="case-list">
+                        <li>High variance in how analysts phrased the same policy answer — hard to train new hires.</li>
+                        <li>No fast way to prove which document version backed a decision after the fact.</li>
+                        <li>Low trust in “AI summaries” without visible citations to specific paragraphs or tables.</li>
+                        <li>Security needed strict collection scope — not whole-tenant search, and not the open web.</li>
+                      </ul>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Constraints</strong>
+                      <p>
+                        SSO and group-based access to curated collections; retention and logging aligned with enterprise GRC; answers had to show source passages, not
+                        only a model confidence score; deployment in the customer’s preferred cloud region.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>What we built</strong>
+                      <p>
+                        Knowledge Studio: governed ingest of policies, SOPs, and FAQs; natural-language Q&amp;A with retrieval scoped per role; an editor workspace for
+                        refinement; citations end-to-end; and hooks to trigger downstream automation once a human marks an answer as approved for reuse.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>Results</strong>
+                      <p>
+                        Directionally: shorter mean time to a defensible answer, fewer escalations to SMEs for repeat questions, and audit conversations that started
+                        with “here is the cited chunk” instead of thread archaeology — quantitative metrics available under NDA.
+                      </p>
+                    </div>
+                    <div class="case-psr-block">
+                      <strong>What we’d do differently next</strong>
+                      <p>
+                        Earlier bulk import of archived ticket macros into the same corpus so suggested replies and policy answers drew from one governed index from
+                        week one.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="case-visual-pair" aria-label="Placeholder for product screenshots">
+                    <div class="case-visual-tile">Chat + citations</div>
+                    <div class="case-visual-tile">Editor workspace</div>
+                  </div>
+                  <p class="case-screenshot-note">Add screenshots when ready: conversation with citations, editor export, and admin collection scope.</p>
+                  </div>
+                  <blockquote class="case-quote">
+                    <p>“We finally had one surface where ‘show your work’ meant a link to the clause — not a screenshot from someone’s inbox.”</p>
+                    <footer>— Head of operational risk (anonymized)</footer>
+                  </blockquote>
+                  <p class="case-link-row">
+                    <a class="case-link" href="#solution-knowledge-studio">Solution overview →</a>
+                    <a class="case-link case-link--secondary" href="#contact">Book a demo →</a>
+                  </p>
+                </div>
+              </article>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="case-carousel-arrow case-carousel-arrow--next"
+                  data-carousel-next
+                  aria-controls="case-carousel-track"
+                  aria-label="Show next case study"
+                >
+                  <span aria-hidden="true">›</span>
+                </button>
+              </div>
+              <p id="case-carousel-status" class="case-carousel-status sr-only" aria-live="polite" aria-atomic="true"></p>
+            </div>
+          </div>
+
+          <dialog id="case-detail-dialog" class="site-detail-dialog site-detail-dialog--case" aria-labelledby="case-detail-dialog-title">
+            <div class="site-detail-dialog-surface">
+              <button type="button" class="site-detail-dialog-x" data-case-detail-dialog-close aria-label="Close dialog">×</button>
+              <h2 id="case-detail-dialog-title" class="site-detail-dialog-title">Case study</h2>
+              <div id="case-detail-dialog-body" class="site-detail-dialog-body"></div>
+              <p class="site-detail-dialog-footer">
+                <button type="button" class="btn btn-primary" data-case-detail-dialog-close>Close</button>
+              </p>
+            </div>
+          </dialog>
+        </div>
+      </section>
+
+      <section class="section section-split" id="about" aria-labelledby="about-us-heading">
+        <div class="container">
+          <h2 id="about-us-heading" class="sr-only">About Us</h2>
+          <div class="section-panel about-tech-panel">
+            <div class="section-head center about-tech-head">
+              <p class="section-kicker">ENTERPRISE-GRADE DELIVERY</p>
+              <h3 id="technology-stack-heading" class="about-tech-title">What Buyers Actually Care About</h3>
+              <p class="section-subtitle about-tech-subtitle">
+                We still integrate with mature stacks — we just lead with outcomes. Technical teams get transparency; stakeholders get clarity.
+              </p>
+            </div>
+            <ul class="value-strip" aria-label="Delivery capabilities">
+              <li>Secure AI deployment — cloud, VPC, or air-gapped / on-prem where required.</li>
+              <li>Enterprise-grade data privacy, access control, and audit-friendly processing logs.</li>
+              <li>Scalable batch and streaming pipelines built for real document volumes.</li>
+              <li>Interop with your APIs, databases, identity, and observability standards.</li>
+            </ul>
+          </div>
+          <div class="section-panel split about-partner-panel">
+            <div>
+              <p class="section-kicker">WHY PRAAM AI?</p>
+              <h3 id="about-heading" class="about-subhead">Why Teams Choose Praam AI</h3>
+              <p class="about-partner-lead">
+                We are not a slide-deck consultancy. We build document-heavy workflows that operators can run every day — with clear SLAs, rollback paths, and room to expand once the first use case wins.
+              </p>
+              <div class="why-grid">
+                <div class="why-item">
+                  <div class="why-icon" aria-hidden="true">
+                    <svg class="why-icon-svg" viewBox="0 0 32 32" width="28" height="28" role="presentation" focusable="false">
+                      <use href="assets/icons/icon-why-expertise.svg#icon" />
+                    </svg>
+                  </div>
+                  <div class="why-copy">
+                    <h3>Built for document-heavy workflows</h3>
+                    <p>Unstructured and structured sources — forms, scans, emails, and feeds — in one automation story.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <div class="why-icon" aria-hidden="true">
+                    <svg class="why-icon-svg" viewBox="0 0 32 32" width="28" height="28" role="presentation" focusable="false">
+                      <use href="assets/icons/icon-why-proven.svg#icon" />
+                    </svg>
+                  </div>
+                  <div class="why-copy">
+                    <h3>Fast deployment (2–4 weeks)</h3>
+                    <p>Scoped pilots with defined inputs, outputs, and success metrics — not open-ended “innovation sprints.”</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <div class="why-icon" aria-hidden="true">
+                    <svg class="why-icon-svg" viewBox="0 0 32 32" width="28" height="28" role="presentation" focusable="false">
+                      <use href="assets/icons/icon-why-tailored.svg#icon" />
+                    </svg>
+                  </div>
+                  <div class="why-copy">
+                    <h3>Accuracy where it matters</h3>
+                    <p>Validation layers, confidence scoring, and human-in-the-loop designed into the workflow — not bolted on later.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <div class="why-icon" aria-hidden="true">
+                    <svg class="why-icon-svg" viewBox="0 0 32 32" width="28" height="28" role="presentation" focusable="false">
+                      <use href="assets/icons/icon-why-delivery.svg#icon" />
+                    </svg>
+                  </div>
+                  <div class="why-copy">
+                    <h3>Designed for real operations</h3>
+                    <p>Production paths, monitoring, and handover — built for teams who process documents for a living.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <aside class="cert-panel" aria-label="Security and compliance">
+              <div class="cert-hero" aria-hidden="true"></div>
+              <div class="cert-grid">
+                <div class="cert-badge">ISO<br /><span>27001 aligned</span></div>
+                <div class="cert-badge">GDPR<br /><span>Ready</span></div>
+                <div class="cert-badge">Secure<br /><span>deployment</span></div>
+                <div class="cert-badge">Scalable<br /><span>architecture</span></div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-bottom" id="resources" aria-label="Resources, call to action, and contact">
+        <div class="container">
+          <div class="section-panel bottom-panel">
+            <div class="bottom-panel-cta">
+              <div class="cta-band-inner">
+                <div>
+                  <p class="cta-kicker">START AUTOMATING</p>
+                  <h2>Start Automating Your Workflows Today</h2>
+                  <p>See how AI can reduce manual document work and improve operational efficiency in your business.</p>
+                  <div class="hero-actions" style="margin-top: 1rem; justify-content: flex-start">
+                    <a class="btn btn-primary" href="#contact">Book a Demo</a>
+                    <a class="btn btn-outline" href="#contact">Get a Custom Solution</a>
+                  </div>
+                </div>
+              </div>
+              <div id="pricing" class="bottom-panel-engagements" aria-labelledby="pricing-heading">
+                <p class="cta-kicker bottom-panel-engagements-kicker">Engagements</p>
+                <h2 id="pricing-heading" class="bottom-panel-engagements-title">Pilot-Friendly, Scope-First</h2>
+                <p class="bottom-panel-engagements-copy">
+                  <strong>Pilots typically start within 2–4 weeks</strong> once requirements and sample documents are agreed. Share your document types and
+                  volumes — we’ll propose a fixed-scope pilot with clear acceptance criteria before any long-term commitment.
+                </p>
+              </div>
+            </div>
+            <footer class="footer" id="contact" aria-labelledby="contact-heading">
+              <div class="footer-inner">
+                <div class="footer-brand">
+                  <h2 id="contact-heading" class="footer-title">Praam AI</h2>
+                  <p>Document intelligence, Knowledge Studio, and workflow automation — secure, measurable, and built to ship.</p>
+                  <div class="footer-links">
+                    <a href="#home">Home</a><a href="#industries">Industries</a><a href="#solutions">Solutions</a><a href="#case-studies">Case Studies</a
+                    ><a href="#about">About Us</a><a href="#resources">Resources</a>
+                  </div>
+                </div>
+                <div class="footer-col"><h3>Quick Links</h3><a href="#contact">Contact</a></div>
+                <div class="footer-col">
+                  <h3>Solutions</h3><a href="#solutions">Document automation</a><a href="#solutions">Workflow automation</a>
+                </div>
+                <div class="footer-col footer-contact">
+                  <h3>Contact Us</h3>
+                  <a class="footer-email" href="mailto:talktopraam.ai@outlook.com">talktopraam.ai@outlook.com</a>
+                  <p class="footer-note">We reply within one business day.</p>
+                  <form class="footer-form" id="contact-form">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" />
+                    <button class="btn btn-primary" type="submit">Send</button>
+                  </form>
+                </div>
+              </div>
+              <div class="footer-bottom"><p>© <span id="year"></span> Praam AI. All rights reserved.</p></div>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js" defer></script>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
+

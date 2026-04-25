@@ -467,3 +467,46 @@ document.querySelector("#contact-form")?.addEventListener("submit", (event) => {
   });
 })();
 
+/** v2 timeline: click steps to mark progress (lines turn blue). */
+(() => {
+  const timelines = Array.from(document.querySelectorAll(".v2-timeline"));
+  if (timelines.length === 0) return;
+
+  function setActive(items, activeIndex) {
+    items.forEach((item, idx) => {
+      item.classList.toggle("is-active", idx === activeIndex);
+      item.classList.toggle("is-complete", idx < activeIndex);
+    });
+  }
+
+  timelines.forEach((timeline) => {
+    const items = Array.from(timeline.querySelectorAll(".v2-timeline-item"));
+    if (items.length === 0) return;
+
+    const initialIndex = Math.max(
+      0,
+      items.findIndex((el) => el.classList.contains("is-active"))
+    );
+    setActive(items, initialIndex === -1 ? 0 : initialIndex);
+
+    items.forEach((item, idx) => {
+      item.setAttribute("role", "button");
+      item.setAttribute("tabindex", "0");
+      item.setAttribute("aria-pressed", item.classList.contains("is-active") ? "true" : "false");
+
+      const activate = () => {
+        setActive(items, idx);
+        items.forEach((el) => el.setAttribute("aria-pressed", el.classList.contains("is-active") ? "true" : "false"));
+      };
+
+      item.addEventListener("click", activate);
+      item.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          activate();
+        }
+      });
+    });
+  });
+})();
+
