@@ -2679,7 +2679,8 @@ body .site-detail-dialog-footer {
   gap: 0.55rem;
 }
 
-.footer-email {
+.footer-email,
+.footer-phone {
   font-weight: 800;
   color: rgba(245, 252, 255, 0.95);
 }

@@ -96,7 +96,8 @@
   color: rgba(255, 255, 255, 0.96);
 }
 
-.site-v2 .footer-email {
+.site-v2 .footer-email,
+.site-v2 .footer-phone {
   color: rgba(255, 255, 255, 0.96);
 }
 
