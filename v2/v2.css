@@ -168,6 +168,18 @@
   width: fit-content;
 }
 
+.site-v2 .v2-topbar-cta.btn-primary,
+.site-v2 .v2-primary-cta.btn-primary {
+  background: #2563eb;
+  box-shadow: 0 18px 44px rgba(37, 99, 235, 0.32);
+}
+
+.site-v2 .v2-topbar-cta.btn-primary:hover,
+.site-v2 .v2-primary-cta.btn-primary:hover {
+  background: #3b82f6;
+  box-shadow: 0 20px 52px rgba(37, 99, 235, 0.38);
+}
+
 .site-v2 .btn-ghost {
   color: rgba(255, 255, 255, 0.92);
   background: rgba(11, 18, 35, 0.55);
