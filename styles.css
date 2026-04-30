@@ -167,6 +167,13 @@ svg {
   color: var(--ai-accent);
 }
 
+.brand-logo-img {
+  display: block;
+  height: clamp(1.65rem, 3.6vw, 2.05rem);
+  width: auto;
+  object-fit: contain;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
