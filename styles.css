@@ -167,34 +167,12 @@ svg {
   color: var(--ai-accent);
 }
 
-/* Text wordmark (header): midnight + accent “aa”, “.ai” same size as body of mark */
-.brand.brand-wordmark {
-  gap: 0;
-}
-
-.brand-wordmark-inner {
-  display: inline-flex;
-  align-items: baseline;
-  font-family: "Inter Tight", Inter, system-ui, sans-serif;
-  font-size: clamp(1.75rem, 4.6vw, 2.35rem);
-  font-weight: 800;
-  letter-spacing: -0.05em;
-  line-height: 1;
-  text-transform: lowercase;
-  white-space: nowrap;
-}
-
-.brand-wm-midnight {
-  color: #050a18;
-}
-
-.brand-wm-accent {
-  color: #0d6bff;
-}
-
-.brand-wm-dotai {
-  font-size: 1em;
-  font-weight: 800;
+/* Header logo raster (praam.ai artwork includes full-size .ai suffix) */
+.brand-logo-img {
+  display: block;
+  height: clamp(2.1rem, 5.5vw, 3rem);
+  width: auto;
+  object-fit: contain;
 }
 
 .site-nav {
