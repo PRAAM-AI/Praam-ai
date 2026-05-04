@@ -170,7 +170,7 @@ svg {
 /* Header logo raster (praam.ai artwork includes full-size .ai suffix) */
 .brand-logo-img {
   display: block;
-  height: clamp(2.1rem, 5.5vw, 3rem);
+  height: clamp(2.45rem, 6.2vw, 3.45rem);
   width: auto;
   object-fit: contain;
 }
@@ -2386,7 +2386,7 @@ body .site-detail-dialog-footer {
   font-weight: 800;
 }
 
-/* Logo strip (Simple Icons–based SVGs in assets/tech; CC0, simpleicons.org) */
+/* Logo strip (optional partner logos; add SVGs under assets/ if used in markup) */
 .logo-strip {
   list-style: none;
   margin: 1.5rem 0 0;

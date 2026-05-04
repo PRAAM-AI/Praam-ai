@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Praam AI</title>
+    <meta
+      name="description"
+      content="Get in touch with Praam AI — strategy sessions, pilots, and partnerships. We reply within one business day."
+    />
+    <meta name="theme-color" content="#050A18" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="v2/v2.css" />
+  </head>
+  <body class="site-v2 contact-page">
+    <div id="top" aria-hidden="true"></div>
+    <header class="topbar v2-topbar">
+      <div class="container topbar-inner v2-topbar-inner">
+        <a class="brand v2-brand" href="index.html#home" aria-label="Praam AI home">
+          <img
+            class="brand-logo-img"
+            src="assets/logo-praam-header.png"
+            alt="praam.ai logo"
+            width="1024"
+            height="426"
+            decoding="async"
+          />
+        </a>
+        <nav class="site-nav v2-nav" aria-label="Primary">
+          <a href="index.html#home">Home</a>
+          <a href="services.html">Services</a>
+          <a href="industries.html">Industries</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <a class="btn btn-primary topbar-cta v2-topbar-cta" href="contact.html">Book a Strategy Session</a>
+      </div>
+    </header>
+
+    <main class="contact-main">
+      <section class="contact-page-panel" aria-labelledby="contact-heading">
+        <div class="container contact-page-panel-inner">
+          <div class="contact-page-left">
+            <div class="contact-page-intro">
+              <p class="v2-kicker">CONTACT</p>
+              <h1 id="contact-heading" class="v2-h1 v2-subpage-title">Let’s talk</h1>
+              <p class="v2-subtitle v2-subpage-lede">
+                Book a strategy session, ask about a pilot, or tell us about your workflows — we reply within one business day.
+              </p>
+            </div>
+
+            <div class="contact-page-details" id="contact" aria-labelledby="contact-panel-heading">
+              <h2 id="contact-panel-heading" class="v2-h2">Contact us</h2>
+              <p class="contact-page-copy">
+                Prefer email or phone? Reach the team directly — or leave your address and we’ll follow up.
+              </p>
+              <a class="footer-email" href="mailto:info@praamai.com">info@praamai.com</a>
+              <a class="footer-phone" href="tel:+447353797460">UK: +44 7353797460</a>
+              <p class="footer-note">We reply within one business day.</p>
+            </div>
+          </div>
+
+          <div class="contact-page-form-card">
+            <form class="footer-form contact-page-form" id="contact-form">
+              <label class="sr-only" for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" aria-labelledby="footer-title">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="footer-brand">
+              <h2 id="footer-title" class="footer-title">Praam AI</h2>
+              <p>Document intelligence, Knowledge Studio, and workflow automation — secure, measurable, and built to ship.</p>
+              <div class="footer-links">
+                <a href="index.html#home">Home</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="about.html">About</a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h3>Solutions</h3><a href="services.html">Document automation</a><a href="services.html">Workflow automation</a>
+            </div>
+          </div>
+          <div class="footer-bottom"><p>© <span id="year"></span> Praam AI. All rights reserved.</p></div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="js/script.js" defer></script>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>

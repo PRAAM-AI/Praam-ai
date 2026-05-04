@@ -1,5 +1,10 @@
 const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
-const sections = navLinks
+/** In-page anchors only — cross-page nav links must not be passed to querySelector. */
+const hashNavLinks = navLinks.filter((link) => {
+  const href = link.getAttribute("href");
+  return href && href.startsWith("#") && href !== "#";
+});
+const sections = hashNavLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
 const siteHeader = document.querySelector(".topbar");
@@ -292,7 +297,12 @@ const updateActiveNav = () => {
   }
 
   navLinks.forEach((link) => {
-    const isActive = link.getAttribute("href") === `#${currentId}`;
+    const href = link.getAttribute("href");
+    if (!href || !href.startsWith("#")) {
+      link.classList.remove("is-active");
+      return;
+    }
+    const isActive = href === `#${currentId}`;
     link.classList.toggle("is-active", isActive);
   });
 };
