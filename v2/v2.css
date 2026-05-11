@@ -2307,7 +2307,7 @@ body.site-v2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: clamp(1.25rem, 4vw, 2.5rem);
-  align-items: start;
+  align-items: stretch;
 }
 
 .site-v2.about-page .about-diff-col {
@@ -2316,6 +2316,11 @@ body.site-v2 {
 }
 
 .site-v2.about-page .about-diff-col--title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
   padding-left: 0;
   border-left: 0;
 }
@@ -2391,7 +2396,15 @@ body.site-v2 {
   display: grid;
   grid-template-columns: minmax(200px, 300px) 1fr;
   gap: clamp(2rem, 5vw, 3.5rem);
-  align-items: start;
+  align-items: stretch;
+}
+
+.site-v2.about-page .about-work-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
 }
 
 .site-v2.about-page .about-work-cards {
@@ -2853,6 +2866,11 @@ body.site-v2 {
 }
 
 .site-v2.home-page .v2-quad .v2-approach-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
   background:
     radial-gradient(900px 520px at 18% 12%, rgba(59, 130, 246, 0.12), transparent 62%),
     radial-gradient(860px 520px at 88% 28%, rgba(96, 165, 250, 0.06), transparent 66%),
@@ -3171,6 +3189,11 @@ body.site-v2 {
 }
 
 .site-v2.services-page .v2-approach-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
   background:
     radial-gradient(900px 520px at 18% 12%, rgba(59, 130, 246, 0.12), transparent 62%),
     radial-gradient(860px 520px at 88% 28%, rgba(96, 165, 250, 0.06), transparent 66%),
