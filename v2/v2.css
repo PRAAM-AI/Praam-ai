@@ -1,7 +1,7 @@
 /* v2 styles are fully scoped to avoid touching v1. */
 .site-v2 {
   --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --font-heading: "Inter Tight", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-heading: "Roboto", "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
   color: rgba(11, 16, 32, 0.92);
 }
 
@@ -24,7 +24,8 @@ body.site-v2 {
 .site-v2 .v2-h3,
 .site-v2 .v2-bridge-title,
 .site-v2 .v2-approach-title,
-.site-v2 .v2-timeline-title {
+.site-v2 .v2-timeline-title,
+.site-v2 [class$="-title"] {
   font-family: var(--font-heading);
   letter-spacing: -0.02em;
 }
@@ -165,7 +166,8 @@ body.site-v2 {
   background: rgba(31, 110, 255, 0.08);
 }
 
-.site-v2 .topbar .site-nav a.is-active {
+.site-v2 .topbar .site-nav a.is-active,
+.site-v2 .topbar .site-nav a[aria-current="page"] {
   color: rgba(11, 16, 32, 0.92);
   background: rgba(31, 110, 255, 0.12);
 }
@@ -224,7 +226,7 @@ body.site-v2 {
   line-height: 1.02;
   letter-spacing: -0.04em;
   font-weight: 900;
-  font-size: clamp(2.4rem, 5vw, 3.85rem);
+  font-size: clamp(2.7rem, 5.4vw, 4.2rem);
 }
 
 .site-v2 .v2-h1-accent {
@@ -232,6 +234,16 @@ body.site-v2 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.site-v2.home-page .v2-panel--hero .v2-h1-accent,
+.site-v2.services-page .v2-panel--hero .v2-h1-accent,
+.site-v2.industries-page .v2-panel--hero .v2-h1-accent,
+.site-v2.about-page .v2-panel--hero .v2-h1-accent {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #2563eb;
 }
 
 .site-v2 .v2-lede {
@@ -654,6 +666,7 @@ body.site-v2 {
 
 .site-v2 .v2-section--intro .v2-subtitle {
   color: rgba(255, 255, 255, 0.72);
+  font-size: 1.12rem;
 }
 
 .site-v2 .v2-section--intro .v2-result-label {
@@ -1268,6 +1281,7 @@ body.site-v2 {
 .site-v2 .v2-solutions-head .v2-subtitle {
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.12rem;
 }
 
 .site-v2 .v2-solution-grid {
@@ -1384,7 +1398,7 @@ body.site-v2 {
 }
 
 .site-v2 .v2-services-value-title {
-  font-family: var(--font-heading, "Inter Tight", sans-serif);
+  font-family: var(--font-heading, "Roboto", sans-serif);
   font-weight: 800;
   font-size: 0.95rem;
   letter-spacing: -0.02em;
@@ -1916,7 +1930,7 @@ body.site-v2 {
 
 .site-v2 .v2-subpage-title {
   max-width: 20ch;
-  font-size: clamp(1.5rem, 3.2vw, 2.15rem);
+  font-size: clamp(1.75rem, 3.6vw, 2.45rem);
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin: 0.35rem 0 0.5rem;
@@ -2013,7 +2027,8 @@ body.site-v2 {
   background: rgba(59, 130, 246, 0.14);
 }
 
-.site-v2.about-page .topbar .site-nav a.is-active {
+.site-v2.about-page .topbar .site-nav a.is-active,
+.site-v2.about-page .topbar .site-nav a[aria-current="page"] {
   color: #fff;
   background: rgba(59, 130, 246, 0.18);
 }
@@ -2065,7 +2080,7 @@ body.site-v2 {
 
 .site-v2.about-page .about-kicker {
   margin: 0 0 0.65rem;
-  font-family: var(--font-heading, "Inter Tight", sans-serif);
+  font-family: var(--font-heading, "Roboto", sans-serif);
   font-weight: 800;
   letter-spacing: 0.14em;
   font-size: 0.78rem;
@@ -2084,7 +2099,7 @@ body.site-v2 {
 
 .site-v2.about-page .about-h2 {
   margin: 0 0 1rem;
-  font-family: var(--font-heading, "Inter Tight", sans-serif);
+  font-family: var(--font-heading, "Roboto", sans-serif);
   font-weight: 700;
   font-size: clamp(1.65rem, 3.5vw, 2.35rem);
   line-height: 1.15;
@@ -2094,7 +2109,7 @@ body.site-v2 {
 
 .site-v2.about-page .about-h3 {
   margin: 0 0 0.45rem;
-  font-family: var(--font-heading, "Inter Tight", sans-serif);
+  font-family: var(--font-heading, "Roboto", sans-serif);
   font-weight: 600;
   font-size: 1.05rem;
   color: rgba(248, 250, 252, 0.95);
@@ -2141,7 +2156,7 @@ body.site-v2 {
 
 .site-v2.about-page .about-hero-line {
   margin: 0;
-  font-family: var(--font-heading, "Inter Tight", sans-serif);
+  font-family: var(--font-heading, "Roboto", sans-serif);
   font-weight: 700;
   font-size: clamp(1.75rem, 4.2vw, 2.75rem);
   line-height: 1.15;
@@ -2154,7 +2169,7 @@ body.site-v2 {
 
 .site-v2.about-page .about-brand-name {
   margin: 1.25rem 0 0.35rem;
-  font-family: var(--font-heading, "Inter Tight", sans-serif);
+  font-family: var(--font-heading, "Roboto", sans-serif);
   font-weight: 800;
   font-size: clamp(1.15rem, 2.5vw, 1.5rem);
   letter-spacing: 0.08em;
@@ -2647,7 +2662,8 @@ body.site-v2 {
   background: rgba(59, 130, 246, 0.14);
 }
 
-.site-v2.home-page .topbar .site-nav a.is-active {
+.site-v2.home-page .topbar .site-nav a.is-active,
+.site-v2.home-page .topbar .site-nav a[aria-current="page"] {
   color: #fff;
   background: rgba(59, 130, 246, 0.18);
 }
@@ -2681,7 +2697,7 @@ body.site-v2 {
 .site-v2.services-page .v2-panel--hero .v2-h1,
 .site-v2.industries-page .v2-panel--hero .v2-h1,
 .site-v2.about-page .v2-panel--hero .v2-h1 {
-  font-size: clamp(1.65rem, 3.4vw, 2.5rem);
+  font-size: clamp(1.95rem, 3.8vw, 2.85rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
 }
@@ -3082,7 +3098,8 @@ body.site-v2 {
   background: rgba(59, 130, 246, 0.14);
 }
 
-.site-v2.services-page .topbar .site-nav a.is-active {
+.site-v2.services-page .topbar .site-nav a.is-active,
+.site-v2.services-page .topbar .site-nav a[aria-current="page"] {
   color: #fff;
   background: rgba(59, 130, 246, 0.18);
 }
@@ -3347,7 +3364,8 @@ body.site-v2 {
   background: rgba(59, 130, 246, 0.14);
 }
 
-.site-v2.industries-page .topbar .site-nav a.is-active {
+.site-v2.industries-page .topbar .site-nav a.is-active,
+.site-v2.industries-page .topbar .site-nav a[aria-current="page"] {
   color: #fff;
   background: rgba(59, 130, 246, 0.18);
 }
@@ -3679,7 +3697,7 @@ body.site-v2 {
 }
 
 .site-v2 .v2-industries-stat-value {
-  font-family: var(--font-heading, "Inter Tight", sans-serif);
+  font-family: var(--font-heading, "Roboto", sans-serif);
   font-weight: 800;
   font-size: clamp(1.35rem, 2.5vw, 1.65rem);
   letter-spacing: -0.02em;

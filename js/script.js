@@ -281,6 +281,34 @@ document.addEventListener(
   true
 );
 
+function normalizePagePath(pathname) {
+  if (!pathname) return "";
+  let path = pathname;
+  if (path.length > 1 && path.endsWith("/")) {
+    path = path.slice(0, -1);
+  }
+  if (path.endsWith("/index.html")) {
+    path = path.slice(0, -"/index.html".length) || "/";
+  }
+  return path;
+}
+
+function navLinkPagePath(link) {
+  const href = link.getAttribute("href");
+  if (!href || href.startsWith("#")) return null;
+  try {
+    return new URL(link.href, window.location.href).pathname;
+  } catch {
+    return null;
+  }
+}
+
+function isCurrentPageNavLink(link) {
+  const path = navLinkPagePath(link);
+  if (!path) return false;
+  return normalizePagePath(path) === normalizePagePath(window.location.pathname);
+}
+
 const updateActiveNav = () => {
   const y = window.scrollY + 180;
   let currentId = "";
@@ -298,12 +326,25 @@ const updateActiveNav = () => {
 
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
-    if (!href || !href.startsWith("#")) {
+    if (!href) {
       link.classList.remove("is-active");
+      link.removeAttribute("aria-current");
       return;
     }
-    const isActive = href === `#${currentId}`;
+
+    if (href.startsWith("#")) {
+      const isActive = href === `#${currentId}`;
+      link.classList.toggle("is-active", isActive);
+      return;
+    }
+
+    const isActive = isCurrentPageNavLink(link);
     link.classList.toggle("is-active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
 };
 
