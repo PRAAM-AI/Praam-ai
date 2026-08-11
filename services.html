@@ -15,27 +15,6 @@
   </head>
   <body class="site-v2 services-page">
     <div id="top" aria-hidden="true"></div>
-    <header class="topbar v2-topbar">
-      <div class="container topbar-inner v2-topbar-inner">
-        <a class="brand v2-brand" href="index.html#home" aria-label="Praam AI home">
-          <img
-            class="brand-logo-img"
-            src="assets/logo-praam.png?v=ks-20260803"
-            alt="praam.ai logo"
-            width="1024"
-            height="426"
-            decoding="async"
-          />
-        </a>
-        <nav class="site-nav v2-nav" aria-label="Primary">
-          <a href="index.html#home">Home</a>
-          <a href="services.html" aria-current="page">Services</a>
-          <a href="industries.html">Industries</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
 
     <main>
       <section class="v2-hero" aria-labelledby="services-hero-heading">
@@ -329,6 +308,59 @@
         </div>
       </section>
     </main>
+
+    <nav class="praam-dock" aria-label="Primary">
+      <div class="praam-dock__surface">
+        <a class="praam-dock__brand" href="index.html#home" aria-label="Praam AI home">
+          <img
+            class="praam-dock__logo"
+            src="assets/logo-praam.png?v=ks-20260803"
+            alt="praam.ai logo"
+            width="1024"
+            height="426"
+            decoding="async"
+          />
+        </a>
+        <div class="praam-dock__links site-nav">
+          <a href="index.html#home">Home</a>
+          <a href="services.html" aria-current="page">Services</a>
+          <a href="industries.html">Industries</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="praam-dock__actions">
+          <a class="praam-dock__cta" href="contact.html">Get started</a>
+          <button
+            type="button"
+            class="praam-dock__menu-btn"
+            aria-expanded="false"
+            aria-controls="praam-dock-sheet"
+            aria-label="Open menu"
+          >
+            <span class="praam-dock__menu-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <div class="praam-dock__backdrop" data-dock-close hidden></div>
+      <div id="praam-dock-sheet" class="praam-dock__sheet" hidden>
+        <div class="praam-dock__sheet-inner">
+          <div class="praam-dock__sheet-head">
+            <span class="praam-dock__sheet-title">Menu</span>
+            <button type="button" class="praam-dock__sheet-close" data-dock-close aria-label="Close menu">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="praam-dock__sheet-nav site-nav">
+            <a href="index.html#home">Home</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="industries.html">Industries</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <a class="praam-dock__cta praam-dock__cta--sheet" href="contact.html">Get started</a>
+        </div>
+      </div>
+    </nav>
 
     <script src="js/script.js" defer></script>
   </body>

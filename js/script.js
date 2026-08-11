@@ -7,9 +7,76 @@ const hashNavLinks = navLinks.filter((link) => {
 const sections = hashNavLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
-const siteHeader = document.querySelector(".topbar");
+const siteDock = document.querySelector(".praam-dock");
 const floatingCta = document.querySelector(".floating-cta");
 const contactSection = document.querySelector("#contact");
+
+/** Floating top dock: scroll chrome + mobile sheet. */
+(() => {
+  const dock = siteDock;
+  if (!dock) return;
+
+  const menuBtn = dock.querySelector(".praam-dock__menu-btn");
+  const sheet = dock.querySelector("#praam-dock-sheet");
+  const backdrop = dock.querySelector(".praam-dock__backdrop");
+  if (!menuBtn || !sheet) return;
+
+  const closeTargets = dock.querySelectorAll("[data-dock-close]");
+
+  function setSheetOpen(open) {
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.classList.toggle("praam-dock-open", open);
+
+    if (open) {
+      sheet.hidden = false;
+      if (backdrop) backdrop.hidden = false;
+      const firstLink = sheet.querySelector("a, button");
+      firstLink?.focus({ preventScroll: true });
+    } else {
+      sheet.hidden = true;
+      if (backdrop) backdrop.hidden = true;
+      if (document.activeElement && sheet.contains(document.activeElement)) {
+        menuBtn.focus({ preventScroll: true });
+      }
+    }
+  }
+
+  function closeSheet() {
+    if (menuBtn.getAttribute("aria-expanded") !== "true") return;
+    setSheetOpen(false);
+  }
+
+  function toggleSheet() {
+    const open = menuBtn.getAttribute("aria-expanded") === "true";
+    setSheetOpen(!open);
+  }
+
+  menuBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleSheet();
+  });
+
+  closeTargets.forEach((el) => {
+    el.addEventListener("click", () => closeSheet());
+  });
+
+  sheet.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => closeSheet());
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeSheet();
+  });
+
+  window.addEventListener(
+    "resize",
+    () => {
+      if (window.matchMedia("(min-width: 900px)").matches) closeSheet();
+    },
+    { passive: true }
+  );
+})();
 
 /** In-page target for #section (used for hash URL + same-hash link clicks). */
 function hashTargetElement(hash) {
@@ -349,7 +416,7 @@ const updateActiveNav = () => {
 };
 
 const updateChromeState = () => {
-  siteHeader?.classList.toggle("is-scrolled", window.scrollY > 12);
+  siteDock?.classList.toggle("is-scrolled", window.scrollY > 12);
 
   if (!floatingCta) {
     return;

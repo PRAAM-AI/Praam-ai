@@ -15,27 +15,6 @@
   </head>
   <body class="site-v2 industries-page">
     <div id="top" aria-hidden="true"></div>
-    <header class="topbar v2-topbar">
-      <div class="container topbar-inner v2-topbar-inner">
-        <a class="brand v2-brand" href="index.html#home" aria-label="Praam AI home">
-          <img
-            class="brand-logo-img"
-            src="assets/logo-praam.png?v=ks-20260803"
-            alt="praam.ai logo"
-            width="1024"
-            height="426"
-            decoding="async"
-          />
-        </a>
-        <nav class="site-nav v2-nav" aria-label="Primary">
-          <a href="index.html#home">Home</a>
-          <a href="services.html">Services</a>
-          <a href="industries.html" aria-current="page">Industries</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
 
     <main>
       <section class="v2-hero" aria-labelledby="industries-hero-heading">
@@ -238,40 +217,6 @@
         </div>
       </section>
 
-      <section class="v2-industries-stats" aria-labelledby="industries-stats-heading">
-        <div class="container v2-industries-stats-inner">
-          <div class="v2-industries-stats-copy">
-            <h2 id="industries-stats-heading" class="v2-h2">Built for complexity. Designed for impact.</h2>
-            <p class="v2-subtitle v2-industries-stats-lede">
-              Measurable delivery across projects, industries, and long-term client relationships.
-            </p>
-          </div>
-          <div class="v2-industries-stats-metrics" role="list">
-            <div class="v2-industries-stat" role="listitem">
-              <div class="v2-industries-stat-value">100+</div>
-              <div class="v2-industries-stat-label">Projects Delivered</div>
-            </div>
-            <div class="v2-industries-stat" role="listitem">
-              <div class="v2-industries-stat-value">30+</div>
-              <div class="v2-industries-stat-label">Industries Impacted</div>
-            </div>
-            <div class="v2-industries-stat" role="listitem">
-              <div class="v2-industries-stat-value">95%</div>
-              <div class="v2-industries-stat-label">Client Retention</div>
-            </div>
-            <div class="v2-industries-stat v2-industries-stat--icon" role="listitem">
-              <div class="v2-industries-stat-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <path d="M4 18V6l4 3 4-3 4 3 4-3v12" stroke-linejoin="round" />
-                  <path d="M8 14l3-2 3 1 4-3" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
-              <div class="v2-industries-stat-label v2-industries-stat-label--strong">Measurable Business Impact</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="v2-section v2-section--subpage-cta v2-section--industries-cta" aria-labelledby="industries-cta-heading">
         <div class="container">
           <div class="v2-subpage-cta-inner">
@@ -286,6 +231,59 @@
         </div>
       </section>
     </main>
+
+    <nav class="praam-dock" aria-label="Primary">
+      <div class="praam-dock__surface">
+        <a class="praam-dock__brand" href="index.html#home" aria-label="Praam AI home">
+          <img
+            class="praam-dock__logo"
+            src="assets/logo-praam.png?v=ks-20260803"
+            alt="praam.ai logo"
+            width="1024"
+            height="426"
+            decoding="async"
+          />
+        </a>
+        <div class="praam-dock__links site-nav">
+          <a href="index.html#home">Home</a>
+          <a href="services.html">Services</a>
+          <a href="industries.html" aria-current="page">Industries</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="praam-dock__actions">
+          <a class="praam-dock__cta" href="contact.html">Get started</a>
+          <button
+            type="button"
+            class="praam-dock__menu-btn"
+            aria-expanded="false"
+            aria-controls="praam-dock-sheet"
+            aria-label="Open menu"
+          >
+            <span class="praam-dock__menu-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      <div class="praam-dock__backdrop" data-dock-close hidden></div>
+      <div id="praam-dock-sheet" class="praam-dock__sheet" hidden>
+        <div class="praam-dock__sheet-inner">
+          <div class="praam-dock__sheet-head">
+            <span class="praam-dock__sheet-title">Menu</span>
+            <button type="button" class="praam-dock__sheet-close" data-dock-close aria-label="Close menu">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="praam-dock__sheet-nav site-nav">
+            <a href="index.html#home">Home</a>
+            <a href="services.html">Services</a>
+            <a href="industries.html" aria-current="page">Industries</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <a class="praam-dock__cta praam-dock__cta--sheet" href="contact.html">Get started</a>
+        </div>
+      </div>
+    </nav>
 
     <script src="js/script.js" defer></script>
   </body>
