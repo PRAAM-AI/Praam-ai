@@ -1,0 +1,129 @@
+/* Praam's single visual system: navy, ice, white, and one sky-blue accent. */
+:root {
+  --praam-navy: #102f43;
+  --praam-navy-deep: #0b2435;
+  --praam-ice: #f1f7fb;
+  --praam-white: #ffffff;
+  --praam-text: #16344a;
+  --praam-muted: #5d7789;
+  --praam-sky: #9fdcf7;
+  --praam-line: #bdd4e2;
+}
+
+body, button, input, textarea { font-family: Inter, Arial, sans-serif; }
+body { color: var(--praam-text); background: var(--praam-ice); }
+
+.eyebrow, .steps b, .cards span { color: var(--praam-sky); }
+
+/* Dark areas use one navy surface instead of black, teal, or mixed gradients. */
+.page-intro,
+body:has(.problem) .approach,
+.final,
+footer,
+.contact-mono .mono-support { background: var(--praam-navy) !important; }
+
+.page-intro,
+body:has(.problem) .approach,
+.final { color: var(--praam-white); }
+.page-intro h1,
+.page-intro h1 em,
+body:has(.problem) .approach h2,
+body:has(.problem) .approach h2 em,
+.final h2,
+.final h2 em { color: var(--praam-white); }
+
+/* The home service band stays in the same family as the photo-led hero. */
+body:has(.hero) .services { background: var(--praam-navy) !important; }
+body:has(.hero) .services .service-card,
+body:has(.hero) .services .cards article { background-color: rgba(255, 255, 255, .06); border-color: rgba(159, 220, 247, .3); }
+
+.services,
+.problem,
+.fit,
+body:has(#approach) .approach,
+.contact-mono,
+.contact-mono .mono-hero { background: var(--praam-ice); }
+
+.services .card,
+.services .cards article,
+.contact-mono .mono-card { border-color: var(--praam-line); }
+
+.button.green,
+.contact-mono .mono-form button { background: #1d6d93; color: var(--praam-white); }
+.contact-mono .mono-form button:hover { background: var(--praam-navy); }
+.contact-mono .mono-support-btn { border-color: rgba(255, 255, 255, .68); }
+
+/* Contact receives the same full-height, image-led opening as the other pages. */
+body.contact-mono .mono-hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 126px 0 58px;
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(90deg, rgba(8, 27, 42, .72) 0%, rgba(8, 27, 42, .42) 46%, rgba(8, 27, 42, .16) 100%), url('../assets/contact-hero-photo.png') center / cover no-repeat !important;
+}
+
+body.contact-mono .mono-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(8, 27, 42, .2), transparent 55%); }
+body.contact-mono .mono-hero-bar { display: none; }
+body.contact-mono .mono-info, body.contact-mono .mono-info-row, body.contact-mono .mono-info-row strong { color: var(--praam-white); }
+body.contact-mono .mono-info-row p { color: rgba(255, 255, 255, .78); }
+body.contact-mono .mono-icon { color: var(--praam-sky); }
+body.contact-mono .mono-info h1 { color: var(--praam-white); font-size: clamp(2.8rem, 4.2vw, 4.5rem); max-width: 9ch; }
+body.contact-mono .mono-intro { margin: -1rem 0 .5rem; max-width: 36ch; color: rgba(255, 255, 255, .84); font-size: 1.05rem; line-height: 1.6; }
+
+body.contact-mono header:not(.is-solid) { background: transparent; border-color: transparent; box-shadow: none; }
+body.contact-mono header:not(.is-solid) .logo img { content: normal; filter: brightness(0) invert(1); }
+body.contact-mono header:not(.is-solid) nav a,
+body.contact-mono header:not(.is-solid) nav a:hover,
+body.contact-mono header:not(.is-solid) nav a[aria-current="page"] { color: var(--praam-white); }
+
+/* Shared type scale: hero, section, card, then supporting copy. */
+html { font-size: 16px; }
+body { font-size: 1rem; line-height: 1.55; }
+nav, .nav-cta, .button, .actions { font-size: .9rem; }
+.eyebrow { font-size: .75rem; letter-spacing: .15em; }
+
+.hero h1,
+.page-intro h1,
+body.contact-mono .mono-info h1 {
+  font-size: clamp(2.9rem, 4.25vw, 4.65rem);
+  line-height: .98;
+}
+
+main > section:not(.hero):not(.page-intro) > .wrap > h2,
+main > section .heading h2,
+.operations-outcomes h2,
+.final h2 {
+  font-size: clamp(2.35rem, 3.45vw, 3.8rem) !important;
+  line-height: 1.02;
+}
+
+.lead { font-size: clamp(1.1rem, 1.45vw, 1.3rem); line-height: 1.5; }
+.sub,
+.heading > p,
+.page-intro__copy > p:not(.eyebrow),
+.hero-copy > p:not(.eyebrow) { font-size: 1.05rem; line-height: 1.6; }
+
+.cards h3,
+.offer-grid h3,
+.industry-grid h3,
+.principle-grid h3,
+.steps h3 { font-size: clamp(1.25rem, 1.55vw, 1.45rem); line-height: 1.15; }
+.cards p,
+.offer-grid p,
+.industry-grid p,
+.principle-grid p,
+.steps p,
+.offer-grid li,
+.industry-grid li { font-size: .94rem; line-height: 1.55; }
+.proof b, .fit-grid b, .operations-outcomes__results h3 { font-size: 1rem; }
+.proof span, .fit-grid p, .operations-outcomes__results p { font-size: .82rem; }
+
+@media (max-width: 800px) {
+  .hero h1, .page-intro h1, body.contact-mono .mono-info h1 { font-size: clamp(2.65rem, 12vw, 3.6rem); }
+  main > section:not(.hero):not(.page-intro) > .wrap > h2,
+  main > section .heading h2,
+  .operations-outcomes h2,
+  .final h2 { font-size: clamp(2.15rem, 9.5vw, 3rem) !important; }
+}

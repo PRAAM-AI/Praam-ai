@@ -137,6 +137,23 @@ header.is-solid {
   box-shadow: 0 8px 24px rgba(0, 0, 0, .06);
 }
 
+/* The image-led home hero always uses white navigation before the sticky bar appears. */
+body:has(.hero) header:not(.is-solid) .logo img {
+  content: normal;
+  filter: brightness(0) invert(1);
+}
+
+body:has(.hero) header:not(.is-solid) nav a,
+body:has(.hero) header:not(.is-solid) nav a:hover,
+body:has(.hero) header:not(.is-solid) nav a[aria-current="page"],
+body:has(.hero) header:not(.is-solid) .nav-cta {
+  color: #fff;
+}
+
+body:has(.hero) header:not(.is-solid) .nav-cta {
+  border-color: rgba(255, 255, 255, .7);
+}
+
 /* Subpage hero */
 .page-hero {
   min-height: 420px;

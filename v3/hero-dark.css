@@ -26,9 +26,9 @@
 }
 
 .hero .eyebrow { color: #a8dff8; }
-.hero h1 { color: #fff; font-size: clamp(3.3rem, 5.15vw, 5.4rem); }
+.hero h1 { color: #fff; font-size: clamp(2.9rem, 4.25vw, 4.65rem); }
 .hero h1 em { color: #fff; }
-.hero-copy > p:not(.eyebrow) { color: rgba(255, 255, 255, .88); }
+.hero-copy > p:not(.eyebrow) { color: rgba(255, 255, 255, .88); font-size: 17px; }
 .actions { color: #fff; }
 .hero .white { color: #06202e; background: #fff; box-shadow: none; }
 .proof { border-color: rgba(255, 255, 255, .37); }

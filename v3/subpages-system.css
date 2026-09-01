@@ -1,10 +1,10 @@
-/* Compact, image-led introductions for the inner pages — not full-screen heroes. */
-.page-intro { padding: 146px 0 56px; background: radial-gradient(circle at 82% 18%, rgba(126, 231, 255, .2), transparent 34%), linear-gradient(115deg, #105b83 0%, #1282ad 52%, #1aa3ce 100%); }
-.page-intro__grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
-.page-intro h1 { max-width: 12ch; font-size: clamp(3.1rem, 5.2vw, 5.8rem); color: #fff; }
+/* Full-height, image-led introductions that share the home hero's visual language. */
+.page-intro { min-height: 100svh; display: flex; align-items: end; padding: 136px 0 82px; position: relative; isolation: isolate; background-size: cover; background-position: center; }
+.page-intro__grid { display: block; width: 100%; }
+.page-intro h1 { max-width: 13ch; font-size: clamp(2.9rem, 4.25vw, 4.65rem); color: #fff; }
 .page-intro h1 em { color: #d6f5ff; }
 .page-intro__copy > p:not(.eyebrow) { max-width: 570px; margin: 22px 0 0; color: rgba(255, 255, 255, .82); font-size: 18px; line-height: 1.6; }
-.page-intro figure { margin: 0; }
+.page-intro figure { display: none; }
 .page-intro img { display: block; width: 100%; max-height: 330px; object-fit: cover; border-radius: 26px; box-shadow: 0 24px 60px rgba(24, 78, 111, .16); }
 .page-intro figcaption { margin-top: 10px; color: rgba(255, 255, 255, .82); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .page-intro .eyebrow { color: #d6f5ff; }
@@ -18,9 +18,12 @@ body:has(.page-intro) header.is-solid nav a, body:has(.page-intro) header.is-sol
 body:has(.page-intro) header.is-solid .nav-cta { border-color: #6e8798; }
 body:has(.page-intro) footer { display: none; }
 
+body:has(.offer-grid) .page-intro { background: linear-gradient(90deg, rgba(8, 27, 42, .8) 0%, rgba(8, 27, 42, .48) 46%, rgba(8, 27, 42, .12) 75%), url('../assets/services-hero-photo.png') center / cover no-repeat !important; }
+body:has(.industry-grid) .page-intro { background: linear-gradient(90deg, rgba(8, 27, 42, .82) 0%, rgba(8, 27, 42, .5) 46%, rgba(8, 27, 42, .12) 75%), url('../assets/industries-hero-photo.png') center / cover no-repeat !important; }
+
 /* About carries the same blue-to-cyan canvas used on the home service section. */
 body:has(.problem) .page-intro {
-  background: radial-gradient(circle at 82% 18%, rgba(126, 231, 255, .2), transparent 34%), linear-gradient(115deg, #105b83 0%, #1282ad 52%, #1aa3ce 100%);
+  background: linear-gradient(90deg, rgba(8, 27, 42, .82) 0%, rgba(8, 27, 42, .5) 46%, rgba(8, 27, 42, .12) 75%), url('../assets/about-hero-photo.png') center / cover no-repeat !important;
 }
 body:has(.problem) .page-intro h1, body:has(.problem) .page-intro h1 em { color: #fff; }
 body:has(.problem) .page-intro__copy > p:not(.eyebrow), body:has(.problem) .page-intro figcaption { color: rgba(255, 255, 255, .82); }
@@ -59,5 +62,8 @@ body:has(#approach) .approach .steps, body:has(#approach) .approach .steps artic
   body:has(.problem) .problem .two { align-items: start; }
   body:has(.problem) .services .diff-grid,
   body:has(.problem) .fit .principle-grid { margin-top: 36px; }
+  .industry-grid--focused { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; }
 }
-@media (max-width: 800px) { .page-intro { padding: 122px 0 66px; } .page-intro__grid { grid-template-columns: 1fr; } .page-intro h1 { max-width: none; } .page-intro img { max-height: none; } }
+
+.industry-grid { border-top: 0; }
+@media (max-width: 800px) { .page-intro { min-height: 720px; padding: 130px 0 58px; background-position: 60% center !important; } .page-intro h1 { max-width: none; } .page-intro img { max-height: none; } }

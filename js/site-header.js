@@ -1,10 +1,14 @@
 (() => {
+  const theme = document.createElement("link");
+  theme.rel = "stylesheet";
+  theme.href = "v3/unified-theme.css";
+  document.head.append(theme);
+
   const header = document.querySelector("header");
   if (!header) return;
 
   const darkHero = document.querySelector(".page-hero");
-  const lightSurface =
-    document.querySelector(".hero") || document.body.classList.contains("contact-mono");
+  const lightSurface = document.body.classList.contains("contact-mono");
 
   const update = () => {
     const y = window.scrollY || 0;
