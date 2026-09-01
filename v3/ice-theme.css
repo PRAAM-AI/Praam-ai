@@ -11,15 +11,6 @@
 }
 
 body { background: var(--ice-0); color: var(--ice-text); }
-body:has(.page-hero) header, body.contact-mono header { color: var(--ice-text); }
-body:has(.page-hero) .logo img, body.contact-mono .logo img { content: url('../assets/logo-praam-light.png'); filter: none; }
-body:has(.page-hero) .nav-cta, body.contact-mono .nav-cta { border-color: #7e98aa; }
-
-.page-hero { min-height: 590px; display: flex; align-items: center; padding: 150px 0 80px; color: var(--ice-text); background: radial-gradient(circle at 78% 28%, rgba(107, 197, 244, .28), transparent 24%), linear-gradient(125deg, #fafdff 0%, #e7f2fc 52%, #d5e6f8 100%); }
-.page-hero-bg { display: none; }
-.page-hero h1 { font-size: clamp(3.5rem, 6vw, 6.8rem); }
-.page-hero h1 em { color: var(--ice-600); }
-.page-hero p:not(.eyebrow) { max-width: 630px; color: var(--ice-muted); font-size: 18px; line-height: 1.65; }
 
 .services, .fit { background: var(--ice-50); }
 .offer-grid, .industry-grid, .principle-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 50px; }
@@ -37,4 +28,4 @@ body:has(.page-hero) .nav-cta, body.contact-mono .nav-cta { border-color: #7e98a
 footer { background: #10293e; }
 
 @media (max-width: 900px) { .offer-grid, .industry-grid, .principle-grid { grid-template-columns: repeat(2, 1fr); } .value-strip { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .offer-grid, .industry-grid, .principle-grid, .value-strip { grid-template-columns: 1fr; } .page-hero { min-height: 500px; } }
+@media (max-width: 560px) { .offer-grid, .industry-grid, .principle-grid, .value-strip { grid-template-columns: 1fr; } }

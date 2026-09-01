@@ -16,17 +16,6 @@
   background: #f3f3f3;
 }
 
-.contact-mono .mono-hero-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 236px;
-  background:
-    linear-gradient(90deg, rgba(3, 18, 33, .18), rgba(3, 18, 33, .06)),
-    url('../assets/contact-glass-network.png') center 42% / cover no-repeat;
-}
-
 .contact-mono .mono-hero-inner {
   position: relative;
   z-index: 1;

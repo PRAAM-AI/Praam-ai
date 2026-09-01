@@ -1,51 +1,3 @@
-.hero {
-  min-height: 760px;
-  color: #162434;
-  background: #eff5f7;
-}
-
-.hero-bg {
-  background:
-    linear-gradient(90deg, rgba(239, 245, 247, .96) 0%, rgba(239, 245, 247, .74) 42%, rgba(239, 245, 247, .08) 70%),
-    url('../assets/praam-hero-no-jacket.png') center / cover no-repeat;
-  filter: none;
-}
-
-.hero-copy {
-  position: relative;
-  padding: 170px 38px 36px;
-  margin-left: max(0px, calc((100vw - 1240px) / -2));
-  max-width: 720px;
-  border: 1px solid rgba(255, 255, 255, .66);
-  border-radius: 0 30px 30px 0;
-  background: rgba(255, 255, 255, .46);
-  box-shadow: 18px 22px 60px rgba(50, 75, 89, .12), inset 0 1px 0 rgba(255, 255, 255, .78);
-  backdrop-filter: blur(20px) saturate(125%);
-  -webkit-backdrop-filter: blur(20px) saturate(125%);
-}
-
-.hero .eyebrow { color: #187da6; }
-.hero h1 { color: #13293b; }
-.hero h1 em { color: #197da5; }
-.hero-copy > p:not(.eyebrow) { color: #4a6170; }
-.actions { color: #1e5f7b; }
-.hero .white { color: #fff; background: #197da5; box-shadow: 0 12px 24px rgba(25, 125, 165, .2); }
-.proof { border-color: rgba(23, 73, 96, .2); }
-.proof div { border-color: rgba(23, 73, 96, .16); }
-.proof b { color: #193246; }
-.proof span { color: #627783; }
-
-@media (max-width: 800px) {
-  .hero { min-height: 700px; }
-  .hero-bg { background-position: 78% center; background-size: auto 83%; }
-  .hero-copy { margin-left: 0; padding: 145px 22px 28px; max-width: 88%; border-radius: 0 24px 24px 0; }
-}
-
-@media (max-width: 480px) {
-  .hero-bg { background-position: 90% bottom; background-size: auto 64%; }
-  .hero-copy { max-width: 100%; background: rgba(255, 255, 255, .72); }
-}
-
 /* Shared chrome: Stratus-style fixed header — transparent on dark, white on light */
 header {
   position: fixed;
@@ -152,50 +104,6 @@ body:has(.hero) header:not(.is-solid) .nav-cta {
 
 body:has(.hero) header:not(.is-solid) .nav-cta {
   border-color: rgba(255, 255, 255, .7);
-}
-
-/* Subpage hero */
-.page-hero {
-  min-height: 420px;
-  display: flex;
-  align-items: end;
-  position: relative;
-  color: #fff;
-  overflow: hidden;
-  isolation: isolate;
-  background: #06111f;
-}
-
-.page-hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(5, 13, 24, .95) 0%, rgba(5, 13, 24, .78) 50%, rgba(5, 13, 24, .45) 100%),
-    linear-gradient(0deg, rgba(5, 13, 24, .55), transparent 55%),
-    url('../assets/praam-hero-team.jpg') center / cover;
-}
-
-.page-hero .wrap {
-  padding: 100px 0 48px;
-}
-
-.page-hero h1 {
-  font-size: clamp(40px, 5.5vw, 72px);
-  margin: 0 0 18px;
-}
-
-.page-hero h1 em {
-  font-style: normal;
-  color: #b9e7fa;
-}
-
-.page-hero > .wrap > p:not(.eyebrow) {
-  max-width: 640px;
-  font-size: 18px;
-  line-height: 1.65;
-  color: #e6eef5;
-  margin: 0;
 }
 
 /* Offering / industry grids */
@@ -344,94 +252,6 @@ body:has(.hero) header:not(.is-solid) .nav-cta {
   color: #5e6972;
   font-size: 14px;
   line-height: 1.55;
-}
-
-/* Contact form (v3 chrome) */
-.contact-layout {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 48px;
-  align-items: start;
-}
-
-.contact-info {
-  display: grid;
-  gap: 22px;
-  padding-top: 12px;
-}
-
-.contact-info a,
-.contact-info .contact-static {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  color: #20262d;
-  font-weight: 650;
-  font-size: 16px;
-}
-
-.contact-info .contact-static strong {
-  display: block;
-  margin-bottom: 6px;
-}
-
-.contact-info .contact-static p {
-  margin: 0;
-  color: #5e6972;
-  font-weight: 500;
-  line-height: 1.55;
-}
-
-.contact-card {
-  background: #fff;
-  border: 1px solid #d6dfe3;
-  border-radius: 12px;
-  padding: 28px;
-  box-shadow: 0 16px 40px rgba(6, 17, 31, .08);
-}
-
-.contact-card h2 {
-  font-size: 28px;
-  margin: 0 0 18px;
-}
-
-.mono-form {
-  display: grid;
-  gap: 12px;
-}
-
-.mono-form input,
-.mono-form textarea {
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #d7d7d7;
-  border-radius: 8px;
-  background: #fff;
-  color: #222;
-  padding: 14px 16px;
-  font: inherit;
-  outline: none;
-}
-
-.mono-form textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.mono-form button {
-  margin-top: 4px;
-  border: 0;
-  border-radius: 8px;
-  background: #142331;
-  color: #fff;
-  font: inherit;
-  font-weight: 800;
-  padding: 14px 16px;
-  cursor: pointer;
-}
-
-.mono-form button:hover {
-  background: #0b1722;
 }
 
 .sr-only {
@@ -604,8 +424,7 @@ footer {
     padding-left: 0;
   }
 
-  .diff-grid,
-  .contact-layout {
+  .diff-grid {
     grid-template-columns: 1fr;
   }
 }

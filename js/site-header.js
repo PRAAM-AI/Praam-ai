@@ -1,28 +1,17 @@
 (() => {
-  const theme = document.createElement("link");
-  theme.rel = "stylesheet";
-  theme.href = "v3/unified-theme.css";
-  document.head.append(theme);
-
   const header = document.querySelector("header");
   if (!header) return;
 
-  const darkHero = document.querySelector(".page-hero");
-  const lightSurface = document.body.classList.contains("contact-mono");
+  const homeHero = document.querySelector("section.hero");
+  const pageIntro = document.querySelector(".page-intro");
+  const contactHero = document.querySelector(".contact-mono .mono-hero");
+  const band = homeHero || pageIntro || contactHero;
 
   const update = () => {
     const y = window.scrollY || 0;
 
-    if (lightSurface) {
-      // Light hero / contact: dark text always; solid white after a short scroll
-      header.classList.add("is-light");
-      header.classList.toggle("is-solid", y > 20);
-      return;
-    }
-
-    if (darkHero) {
-      // Dark subpage hero: white text over hero, white bar + dark text after
-      const threshold = Math.max(120, darkHero.offsetHeight * 0.55);
+    if (band) {
+      const threshold = Math.max(120, band.offsetHeight * 0.55);
       const past = y > threshold;
       header.classList.toggle("is-light", past);
       header.classList.toggle("is-solid", past);

@@ -65,7 +65,6 @@ body.contact-mono .mono-hero {
 }
 
 body.contact-mono .mono-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(8, 27, 42, .2), transparent 55%); }
-body.contact-mono .mono-hero-bar { display: none; }
 body.contact-mono .mono-info, body.contact-mono .mono-info-row, body.contact-mono .mono-info-row strong { color: var(--praam-white); }
 body.contact-mono .mono-info-row p { color: rgba(255, 255, 255, .78); }
 body.contact-mono .mono-icon { color: var(--praam-sky); }
