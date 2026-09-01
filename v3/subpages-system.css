@@ -1,0 +1,63 @@
+/* Compact, image-led introductions for the inner pages — not full-screen heroes. */
+.page-intro { padding: 146px 0 56px; background: radial-gradient(circle at 82% 18%, rgba(126, 231, 255, .2), transparent 34%), linear-gradient(115deg, #105b83 0%, #1282ad 52%, #1aa3ce 100%); }
+.page-intro__grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.page-intro h1 { max-width: 12ch; font-size: clamp(3.1rem, 5.2vw, 5.8rem); color: #fff; }
+.page-intro h1 em { color: #d6f5ff; }
+.page-intro__copy > p:not(.eyebrow) { max-width: 570px; margin: 22px 0 0; color: rgba(255, 255, 255, .82); font-size: 18px; line-height: 1.6; }
+.page-intro figure { margin: 0; }
+.page-intro img { display: block; width: 100%; max-height: 330px; object-fit: cover; border-radius: 26px; box-shadow: 0 24px 60px rgba(24, 78, 111, .16); }
+.page-intro figcaption { margin-top: 10px; color: rgba(255, 255, 255, .82); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.page-intro .eyebrow { color: #d6f5ff; }
+body:has(.page-intro) header { color: #fff; }
+body:has(.page-intro) header .logo img { content: normal; filter: none; }
+body:has(.page-intro) header nav a, body:has(.page-intro) header nav a:hover, body:has(.page-intro) header nav a[aria-current="page"] { color: rgba(255, 255, 255, .94); }
+body:has(.page-intro) header .nav-cta { color: #fff; border-color: rgba(255, 255, 255, .7); }
+body:has(.page-intro) header.is-solid { background: #fff; border-bottom-color: rgba(18, 45, 66, .1); }
+body:has(.page-intro) header.is-solid .logo img { content: url('../assets/logo-praam-light.png'); filter: none; }
+body:has(.page-intro) header.is-solid nav a, body:has(.page-intro) header.is-solid nav a:hover, body:has(.page-intro) header.is-solid nav a[aria-current="page"], body:has(.page-intro) header.is-solid .nav-cta { color: #122d42; }
+body:has(.page-intro) header.is-solid .nav-cta { border-color: #6e8798; }
+body:has(.page-intro) footer { display: none; }
+
+/* About carries the same blue-to-cyan canvas used on the home service section. */
+body:has(.problem) .page-intro {
+  background: radial-gradient(circle at 82% 18%, rgba(126, 231, 255, .2), transparent 34%), linear-gradient(115deg, #105b83 0%, #1282ad 52%, #1aa3ce 100%);
+}
+body:has(.problem) .page-intro h1, body:has(.problem) .page-intro h1 em { color: #fff; }
+body:has(.problem) .page-intro__copy > p:not(.eyebrow), body:has(.problem) .page-intro figcaption { color: rgba(255, 255, 255, .82); }
+body:has(.problem) .page-intro .eyebrow { color: #d6f5ff; }
+body:has(.problem) header { color: #fff; }
+body:has(.problem) header .logo img { content: normal; filter: none; }
+body:has(.problem) header nav a, body:has(.problem) header nav a:hover, body:has(.problem) header nav a[aria-current="page"] { color: rgba(255, 255, 255, .94); }
+body:has(.problem) header .nav-cta { color: #fff; border-color: rgba(255, 255, 255, .7); }
+body:has(.problem) header.is-solid { background: #fff; border-bottom-color: rgba(18, 45, 66, .1); }
+body:has(.problem) header.is-solid .logo img { content: url('../assets/logo-praam-light.png'); filter: none; }
+body:has(.problem) header.is-solid nav a, body:has(.problem) header.is-solid nav a:hover, body:has(.problem) header.is-solid nav a[aria-current="page"], body:has(.problem) header.is-solid .nav-cta { color: #122d42; }
+body:has(.problem) header.is-solid .nav-cta { border-color: #6e8798; }
+body:has(.problem) .approach {
+  background: radial-gradient(circle at 78% 16%, rgba(112, 226, 255, .16), transparent 34%), linear-gradient(115deg, #105b83 0%, #1282ad 52%, #1aa3ce 100%);
+}
+body:has(.problem) .approach .eyebrow { color: #d6f5ff; }
+body:has(.problem) .approach h2 em { color: #d6f5ff; }
+body:has(.problem) .approach .heading > p, body:has(.problem) .approach .steps p { color: rgba(255, 255, 255, .8); }
+body:has(.problem) .approach .steps, body:has(.problem) .approach .steps article { border-color: rgba(255, 255, 255, .3); }
+body:has(.problem) .approach .steps b { color: #d6f5ff; }
+
+/* Services approach follows the light service-card surface. */
+body:has(#approach) .approach { background: linear-gradient(135deg, #f6fbff 0%, #e7f1fb 100%); color: #122d42; }
+body:has(#approach) .approach .eyebrow, body:has(#approach) .approach h2 em, body:has(#approach) .approach .steps b { color: #168bc0; }
+body:has(#approach) .approach .heading > p, body:has(#approach) .approach .steps p { color: #587286; }
+body:has(#approach) .approach .steps, body:has(#approach) .approach .steps article { border-color: #c6d9e8; }
+@media (min-width: 1000px) {
+  main > .approach.block, main > .problem.block, main > .services.block, main > .fit.block { min-height: 0; display: block; padding: 76px 0; }
+  main > .approach.block > .wrap, main > .problem.block > .wrap, main > .services.block > .wrap, main > .fit.block > .wrap { width: min(1240px, calc(100% - 96px)); }
+  main > .final { min-height: 0; padding: 78px 0; }
+  body:has(.problem) main > .approach.block,
+  body:has(.problem) main > .problem.block,
+  body:has(.problem) main > .services.block,
+  body:has(.problem) main > .fit.block { min-height: 0; padding: 76px 0; }
+  body:has(.problem) .approach .steps { margin-top: 46px; }
+  body:has(.problem) .problem .two { align-items: start; }
+  body:has(.problem) .services .diff-grid,
+  body:has(.problem) .fit .principle-grid { margin-top: 36px; }
+}
+@media (max-width: 800px) { .page-intro { padding: 122px 0 66px; } .page-intro__grid { grid-template-columns: 1fr; } .page-intro h1 { max-width: none; } .page-intro img { max-height: none; } }

@@ -1,0 +1,7 @@
+@media (min-width: 801px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+  .cards article { min-height: 455px; }
+  .cards article:nth-child(2) { background: #edf7fa; }
+  .cards article:nth-child(4) { background: #f2f6f7; }
+  .cards h3 { font-size: 25px; }
+}

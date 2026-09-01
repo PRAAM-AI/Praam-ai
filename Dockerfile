@@ -8,5 +8,6 @@ COPY js /usr/share/nginx/html/js
 COPY styles.css /usr/share/nginx/html/styles.css
 COPY assets /usr/share/nginx/html/assets
 COPY v2 /usr/share/nginx/html/v2
+COPY v3 /usr/share/nginx/html/v3
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -1,0 +1,12 @@
+.foundations { background: #f4f7f8; }
+.foundation-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, .86fr); gap: clamp(3rem, 9vw, 9rem); align-items: center; }
+.foundation-top h2 { font-size: clamp(3rem, 5.2vw, 5.6rem); }
+.foundation-top figure { margin: 0; }
+.foundation-top figure img { width: 100%; border-radius: 22px; box-shadow: 0 25px 55px rgba(16, 47, 66, .18); }
+.foundation-top figcaption { margin-top: 14px; color: #657783; font-size: 13px; line-height: 1.5; }
+.foundation-approach { margin-top: clamp(5rem, 10vw, 9rem); padding-top: clamp(4rem, 7vw, 6rem); border-top: 1px solid #cbd8dd; }
+.foundation-approach .steps { border-color: #bfd0d8; }
+.foundation-approach .steps article { border-color: #c6d5db; }
+.foundation-approach .steps p { color: #5b6d79; }
+.foundation-approach .steps h3 { color: #172631; }
+@media (max-width: 800px) { .foundation-top { grid-template-columns: 1fr; } .foundation-top figure { max-width: 560px; } }

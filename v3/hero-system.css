@@ -1,0 +1,21 @@
+/* Shared desktop composition: every key homepage section follows the hero rhythm. */
+@media (min-width: 1000px) {
+  main > section:not(.hero) {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding-top: 74px;
+    padding-bottom: 74px;
+  }
+
+  main > section:not(.hero) > .wrap { width: min(1240px, calc(100% - 96px)); }
+  main > section .eyebrow { margin-bottom: 16px; font-size: 12px; }
+  main > section h2 { font-size: clamp(3.4rem, 5.1vw, 5.8rem); line-height: .96; }
+  main > section .sub, main > section .lead { max-width: 620px; font-size: 18px; line-height: 1.6; }
+
+  .approach-showcase, .operations-outcomes, .services, .final { min-height: 100svh; }
+  .approach-showcase__grid, .operations-outcomes__grid { width: 100%; }
+  .services .cards { width: 100%; }
+  .services .cards article { min-height: 350px; }
+  .final .wrap { width: min(1240px, calc(100% - 96px)); }
+}

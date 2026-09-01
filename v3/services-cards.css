@@ -1,0 +1,24 @@
+.services { background: #fbfcfc; }
+.services > .wrap > .eyebrow, .services > .wrap > h2, .services > .wrap > .sub { text-align: center; }
+.services > .wrap > h2 { font-size: clamp(3rem, 5vw, 5rem); }
+.services .cards { border: 0; gap: 28px; margin-top: 70px; align-items: start; }
+.services .cards article {
+  position: relative;
+  min-height: 425px;
+  padding: 42px 32px 28px;
+  border: 1px solid #e1e8eb;
+  border-radius: 16px;
+  background: #fff !important;
+  box-shadow: 0 18px 42px rgba(22, 54, 71, .08);
+}
+.services .cards article:nth-child(even) { margin-top: 54px; }
+.services .cards article::before { display: block; margin-bottom: 28px; color: #1886b7; font-size: 30px; line-height: 1; }
+.services .cards article:nth-child(1)::before { content: "◌"; }
+.services .cards article:nth-child(2)::before { content: "✚"; }
+.services .cards article:nth-child(3)::before { content: "◇"; }
+.services .cards article:nth-child(4)::before { content: "⌘"; }
+.services .cards article > span { display: none; }
+.services .cards h3 { margin: 0 0 6px; font-size: 24px; }
+.services .cards p { margin-top: 24px; }
+.services .cards a { color: #1685b6; }
+@media (max-width: 800px) { .services .cards article:nth-child(even) { margin-top: 0; } }

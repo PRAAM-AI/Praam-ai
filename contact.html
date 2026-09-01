@@ -3,127 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Praam AI</title>
+    <title>Get started | Praam AI</title>
     <meta
       name="description"
       content="Get in touch with Praam AI — strategy sessions, pilots, and partnerships. We reply within one business day."
     />
-    <meta name="theme-color" content="#050A18" />
+    <meta name="theme-color" content="#1a1a1a" />
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="v2/v2.css" />
+    <link rel="stylesheet" href="v3/home.css" />
+    <link rel="stylesheet" href="v3/overrides.css" />
+    <link rel="stylesheet" href="v3/ice-theme.css" />
+    <link rel="stylesheet" href="css/contact-mono.css" />
   </head>
-  <body class="site-v2 contact-page">
+  <body class="contact-mono">
     <div id="top" aria-hidden="true"></div>
 
-    <main class="contact-main">
-      <section class="contact-page-panel" aria-labelledby="contact-heading">
-        <div class="container contact-page-panel-inner">
-          <div class="contact-page-left">
-            <div class="contact-page-intro">
-              <p class="v2-kicker">CONTACT</p>
-              <h1 id="contact-heading" class="v2-h1 v2-subpage-title">Let’s talk</h1>
-              <p class="v2-subtitle v2-subpage-lede">
-                Book a strategy session, ask about a pilot, or tell us about your workflows — we reply within one business day.
-              </p>
-            </div>
+    <header>
+      <a class="logo" href="index.html#home"><img src="assets/logo-praam.png" alt="Praam AI" /></a>
+      <nav>
+        <a href="index.html#home">Home</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a class="nav-cta" href="contact.html">Get started ↗</a>
+    </header>
 
-            <div class="contact-page-details" id="contact" aria-labelledby="contact-panel-heading">
-              <h2 id="contact-panel-heading" class="v2-h2">Contact us</h2>
-              <p class="contact-page-copy">
-                Prefer email or phone? Reach the team directly — or leave your address and we’ll follow up.
-              </p>
-              <a class="footer-email" href="mailto:info@praamai.com">info@praamai.com</a>
-              <a class="footer-phone" href="tel:+447353797460">UK: +44 7353797460</a>
-              <p class="footer-note">We reply within one business day.</p>
+    <main class="mono-main">
+      <section class="mono-hero" aria-labelledby="contact-heading">
+        <div class="mono-hero-bar"></div>
+        <div class="wrap mono-hero-inner">
+          <div class="mono-info">
+            <h1 id="contact-heading" class="sr-only">Contact us</h1>
+            <a class="mono-info-row" href="tel:+447353797460">
+              <span class="mono-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2.5" width="10" height="19" rx="2"/><circle cx="12" cy="18.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+              </span>
+              <span>UK: +44 7353797460</span>
+            </a>
+            <a class="mono-info-row" href="mailto:info@praamai.com">
+              <span class="mono-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+              </span>
+              <span>info@praamai.com</span>
+            </a>
+            <div class="mono-info-row mono-info-row--static">
+              <span class="mono-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.2"/></svg>
+              </span>
+              <div>
+                <strong>Working with us</strong>
+                <p>Strategy sessions, pilots, and partnerships.<br />We reply within one business day.</p>
+              </div>
             </div>
           </div>
 
-          <div class="contact-page-form-card">
-            <form class="footer-form contact-page-form" id="contact-form">
+          <div class="mono-card" id="contact">
+            <h2>Send us a message</h2>
+            <form class="mono-form" id="contact-form">
+              <label class="sr-only" for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Name" autocomplete="name" required />
+
               <label class="sr-only" for="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
-              <button class="btn btn-primary" type="submit">Send</button>
+              <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required />
+
+              <label class="sr-only" for="website">Website</label>
+              <input id="website" name="website" type="url" placeholder="Website" autocomplete="url" />
+
+              <label class="sr-only" for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Subject" required />
+
+              <label class="sr-only" for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>
       </section>
 
-      <footer class="footer" aria-labelledby="footer-title">
-        <div class="container">
-          <div class="footer-inner">
-            <div class="footer-brand">
-              <h2 id="footer-title" class="footer-title">Praam AI</h2>
-              <p>Document intelligence, Knowledge Studio, and workflow automation — secure, measurable, and built to ship.</p>
-              <div class="footer-links">
-                <a href="index.html#home">Home</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="about.html">About</a>
-              </div>
-            </div>
-            <div class="footer-col">
-              <h3>Solutions</h3><a href="services.html">Document automation</a><a href="services.html">Workflow automation</a>
-            </div>
-          </div>
-          <div class="footer-bottom"><p>© <span id="year"></span> Praam AI. All rights reserved.</p></div>
+      <section class="mono-support" aria-label="Support">
+        <div class="wrap mono-support-inner">
+          <p>Looking for support? Learn how we work.</p>
+          <a class="mono-support-btn" href="about.html">About Praam <span aria-hidden="true">→</span></a>
         </div>
-      </footer>
+      </section>
     </main>
 
-    <nav class="praam-dock" aria-label="Primary">
-      <div class="praam-dock__surface">
-        <a class="praam-dock__brand" href="index.html#home" aria-label="Praam AI home">
-          <img
-            class="praam-dock__logo"
-            src="assets/logo-praam.png?v=ks-20260803"
-            alt="praam.ai logo"
-            width="1024"
-            height="426"
-            decoding="async"
-          />
-        </a>
-        <div class="praam-dock__links site-nav">
-          <a href="index.html#home">Home</a>
-          <a href="services.html">Services</a>
-          <a href="industries.html">Industries</a>
-          <a href="about.html">About</a>
-          <a href="contact.html" aria-current="page">Contact</a>
+    <footer>
+      <div class="wrap footer-grid">
+        <div class="footer-col">
+          <h3>About Us</h3>
+          <p>Praam AI designs and delivers integrated AI systems — document intelligence, Knowledge Studio, and workflow automation that are secure, measurable, and built to ship.</p>
+          <h4>How we engage</h4>
+          <div class="footer-chips"><span>Strategy</span><span>Pilot</span><span>Deploy</span></div>
         </div>
-        <div class="praam-dock__actions">
-          <a class="praam-dock__cta" href="contact.html">Get started</a>
-          <button
-            type="button"
-            class="praam-dock__menu-btn"
-            aria-expanded="false"
-            aria-controls="praam-dock-sheet"
-            aria-label="Open menu"
-          >
-            <span class="praam-dock__menu-icon" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-      <div class="praam-dock__backdrop" data-dock-close hidden></div>
-      <div id="praam-dock-sheet" class="praam-dock__sheet" hidden>
-        <div class="praam-dock__sheet-inner">
-          <div class="praam-dock__sheet-head">
-            <span class="praam-dock__sheet-title">Menu</span>
-            <button type="button" class="praam-dock__sheet-close" data-dock-close aria-label="Close menu">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="praam-dock__sheet-nav site-nav">
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <ul class="footer-contact">
+            <li><a href="mailto:info@praamai.com">info@praamai.com</a></li>
+            <li><a href="tel:+447353797460">UK: +44 7353797460</a></li>
+            <li>We reply within one business day</li>
+          </ul>
+          <h4>Explore</h4>
+          <div class="footer-chips">
             <a href="index.html#home">Home</a>
             <a href="services.html">Services</a>
             <a href="industries.html">Industries</a>
             <a href="about.html">About</a>
-            <a href="contact.html" aria-current="page">Contact</a>
           </div>
-          <a class="praam-dock__cta praam-dock__cta--sheet" href="contact.html">Get started</a>
+        </div>
+        <div class="footer-col">
+          <h3>Solutions</h3>
+          <ul class="footer-list">
+            <li><a href="index.html#solutions">Knowledge Studio</a><span>Decision support</span></li>
+            <li><a href="index.html#solutions">ArokiyaMedX</a><span>Healthcare</span></li>
+            <li><a href="index.html#solutions">PRISM</a><span>Procurement</span></li>
+            <li><a href="services.html">Document automation</a><span>Workflow systems</span></li>
+          </ul>
         </div>
       </div>
-    </nav>
+      <div class="wrap footer-bottom">
+        <p>© 2026 Praam AI. All rights reserved.</p>
+        <a class="to-top" href="#top" aria-label="Back to top">↑</a>
+      </div>
+    </footer>
 
-    <script src="js/script.js" defer></script>
     <script>
-      document.getElementById("year").textContent = String(new Date().getFullYear());
+      document.getElementById("contact-form")?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const b = e.currentTarget.querySelector("button");
+        const t = b.textContent;
+        b.textContent = "Message Received";
+        b.disabled = true;
+        setTimeout(() => {
+          b.textContent = t;
+          b.disabled = false;
+        }, 2200);
+      });
     </script>
+      <script src="js/site-header.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,35 @@
+@media (min-width: 1000px) {
+  .services { align-items: flex-start !important; padding-top: 76px !important; }
+  .services > .wrap { padding-top: 0; }
+}
+
+.services {
+  background:
+    radial-gradient(circle at 80% 16%, rgba(112, 226, 255, .18), transparent 34%),
+    linear-gradient(115deg, #105b83 0%, #1282ad 52%, #1aa3ce 100%) !important;
+  color: #fff;
+}
+.services > .wrap > .eyebrow { color: #77d8ff; }
+.services > .wrap > h2 { color: #fff; background: none; }
+.services > .wrap > .eyebrow,
+.services > .wrap > h2,
+.services > .wrap > .sub { text-align: center; }
+.services > .wrap > .sub { max-width: 620px; margin: 24px auto 0; color: rgba(223, 240, 250, .75); }
+.services .cards { margin-top: 42px; }
+.services .cards article {
+  border-color: rgba(168, 222, 247, .2);
+  background: rgba(4, 50, 76, .42) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 20px 45px rgba(0,0,0,.18);
+  backdrop-filter: blur(14px);
+}
+.services .cards h3, .services .cards p { color: #fff; }
+.services .cards small { color: #9eddf8; }
+.services .cards em { color: rgba(225, 240, 248, .75); }
+.services .cards a { color: #73d9ff; }
+.services .cards article::before { color: #7bdbff; }
+@media (min-width: 1000px) { .services .cards article:nth-child(even) { margin-top: 20px; } }
+
+/* Home-page footer shares the same blue-to-cyan canvas. */
+footer {
+  background: radial-gradient(circle at 82% 16%, rgba(112, 226, 255, .17), transparent 34%), linear-gradient(115deg, #105b83 0%, #1282ad 52%, #1aa3ce 100%);
+}
